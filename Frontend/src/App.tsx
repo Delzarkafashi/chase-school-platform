@@ -1,0 +1,29 @@
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import CoursesPage from "./pages/CoursesPage";
+import CourseDetailsPage from "./pages/CourseDetailsPage";
+import AboutPage from "./pages/AboutPage";
+import BusinessPage from "./pages/BusinessPage";
+import ContactPage from "./pages/ContactPage";
+import LoginPage from "./pages/LoginPage";
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+
+      <Route path="/utbildningar" element={<CoursesPage />} />
+      <Route
+        path="/utbildningar/:id"
+        element={<CourseDetailsPage />}
+      />
+
+      <Route path="/om-chase" element={<AboutPage />} />
+      <Route path="/foretag" element={<BusinessPage />} />
+      <Route path="/kontakt" element={<ContactPage />} />
+      <Route path="/login" element={<LoginPage />} />
+    </Routes>
+  );
+}
+
+export default App;

@@ -1,0 +1,266 @@
+.hero {
+  width: 100%;
+  background: #f5f5f2;
+  overflow: hidden;
+}
+
+.hero-container {
+  max-width: 1280px;
+  min-height: 620px;
+  margin: 0 auto;
+  padding: 80px 32px;
+
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 72px;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  margin-bottom: 24px;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  color: #555555;
+}
+
+.hero-content h1 {
+  margin: 0;
+
+  font-size: clamp(52px, 6vw, 84px);
+  line-height: 0.98;
+  letter-spacing: -4px;
+  font-weight: 800;
+  color: #111111;
+}
+
+.hero-content h1 span {
+  display: block;
+  color: #555555;
+}
+
+.hero-content p {
+  max-width: 580px;
+  margin: 28px 0 0;
+
+  font-size: 19px;
+  line-height: 1.65;
+  color: #555555;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+
+  margin-top: 36px;
+}
+
+.hero-primary-button,
+.hero-secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 52px;
+  padding: 0 24px;
+
+  border-radius: 999px;
+
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.hero-primary-button {
+  background: #111111;
+  color: #ffffff;
+  border: 1px solid #111111;
+}
+
+.hero-primary-button:hover {
+  transform: translateY(-2px);
+  background: #2a2a2a;
+}
+
+.hero-secondary-button {
+  background: transparent;
+  color: #111111;
+  border: 1px solid #c8c8c8;
+}
+
+.hero-secondary-button:hover {
+  transform: translateY(-2px);
+  border-color: #111111;
+}
+
+.hero-visual {
+  position: relative;
+
+  min-height: 470px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-card {
+  border-radius: 30px;
+}
+
+.hero-card-main {
+  width: 100%;
+  max-width: 480px;
+  min-height: 390px;
+
+  padding: 48px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  background: #111111;
+  color: #ffffff;
+
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12);
+}
+
+.hero-card-main > span {
+  margin-bottom: auto;
+
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #bcbcbc;
+}
+
+.hero-card-main h2 {
+  max-width: 390px;
+  margin: 0;
+
+  font-size: 42px;
+  line-height: 1.05;
+  letter-spacing: -2px;
+}
+
+.hero-card-main p {
+  margin: 22px 0 0;
+
+  font-size: 16px;
+  line-height: 1.6;
+  color: #d1d1d1;
+}
+
+.hero-stat-card {
+  position: absolute;
+  right: -10px;
+  bottom: 18px;
+
+  min-width: 190px;
+  padding: 22px 26px;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #ffffff;
+  border-radius: 20px;
+
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.12);
+}
+
+.hero-stat-card strong {
+  font-size: 32px;
+  line-height: 1;
+  color: #111111;
+}
+
+.hero-stat-card span {
+  margin-top: 8px;
+
+  font-size: 14px;
+  color: #666666;
+}
+
+@media (max-width: 1000px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 56px;
+
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .hero-content {
+    max-width: 760px;
+  }
+
+  .hero-visual {
+    min-height: auto;
+  }
+
+  .hero-card-main {
+    max-width: none;
+  }
+
+  .hero-stat-card {
+    right: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-container {
+    padding: 56px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 50px;
+    letter-spacing: -2.5px;
+  }
+
+  .hero-content p {
+    font-size: 17px;
+  }
+
+  .hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .hero-primary-button,
+  .hero-secondary-button {
+    width: 100%;
+  }
+
+  .hero-card-main {
+    min-height: 340px;
+    padding: 32px;
+    border-radius: 24px;
+  }
+
+  .hero-card-main h2 {
+    font-size: 34px;
+  }
+
+  .hero-stat-card {
+    position: relative;
+    right: auto;
+    bottom: auto;
+
+    width: calc(100% - 32px);
+    margin: -30px auto 0;
+  }
+}
