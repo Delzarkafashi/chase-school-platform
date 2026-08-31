@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import Header from "../components/layout/Header";
 import CourseCard from "../components/home/CourseCard";
+import CourseFilters from "../components/courses/CourseFilters";
 import type { Course } from "../types/Course";
+import type { CourseFilters as CourseFiltersType } from "../types/CourseFilters";
 import { getCourses } from "../api/coursesApi";
 import "../styles/courses-page.css";
 
@@ -9,6 +11,16 @@ function CoursesPage() {
   const [courses, setCourses] = useState<Course[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+
+  const [filters, setFilters] = useState<CourseFiltersType>({
+    search: "",
+    studyForm: "",
+    studyPace: "",
+    location: "",
+    category: "",
+    startYear: "",
+    applicationStatus: "",
+  });
 
   useEffect(() => {
     async function loadCourses() {
@@ -24,6 +36,53 @@ function CoursesPage() {
 
     loadCourses();
   }, []);
+
+  const filteredCourses = courses.filter((course) => {
+    const searchTerm = filters.search.toLowerCase().trim();
+
+    const matchesSearch =
+      searchTerm === "" ||
+      course.name.toLowerCase().includes(searchTerm) ||
+      course.shortDescription.toLowerCase().includes(searchTerm) ||
+      course.category.toLowerCase().includes(searchTerm);
+
+    const matchesStudyForm =
+      filters.studyForm === "" ||
+      course.studyForm === filters.studyForm;
+
+    const matchesStudyPace =
+      filters.studyPace === "" ||
+      course.studyPace === filters.studyPace;
+
+    const matchesLocation =
+      filters.location === "" ||
+      course.location === filters.location;
+
+    const matchesCategory =
+      filters.category === "" ||
+      course.category === filters.category;
+
+    const matchesStartYear =
+      filters.startYear === "" ||
+      course.startDate.startsWith(filters.startYear);
+
+    const matchesApplicationStatus =
+      filters.applicationStatus === "" ||
+      (filters.applicationStatus === "open" &&
+        course.isOpenForApplication === true) ||
+      (filters.applicationStatus === "closed" &&
+        course.isOpenForApplication === false);
+
+    return (
+      matchesSearch &&
+      matchesStudyForm &&
+      matchesStudyPace &&
+      matchesLocation &&
+      matchesCategory &&
+      matchesStartYear &&
+      matchesApplicationStatus
+    );
+  });
 
   return (
     <>
@@ -58,18 +117,31 @@ function CoursesPage() {
               </div>
 
               <span className="courses-count">
-                {courses.length} utbildningar
+                {filteredCourses.length} utbildningar
               </span>
             </div>
+
+            <CourseFilters
+            filters={filters}
+            onChange={setFilters}
+            courses={courses}
+            />
 
             {loading && <p>Laddar utbildningar...</p>}
 
             {error && <p>{error}</p>}
 
-            {!loading && !error && (
+            {!loading && !error && filteredCourses.length === 0 && (
+              <p>Inga utbildningar matchar dina filter.</p>
+            )}
+
+            {!loading && !error && filteredCourses.length > 0 && (
               <div className="courses-page-grid">
-                {courses.map((course) => (
-                  <CourseCard key={course.id} course={course} />
+                {filteredCourses.map((course) => (
+                  <CourseCard
+                    key={course.id}
+                    course={course}
+                  />
                 ))}
               </div>
             )}
