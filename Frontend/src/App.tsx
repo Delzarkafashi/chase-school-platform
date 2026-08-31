@@ -6,6 +6,8 @@ import AboutPage from "./pages/AboutPage";
 import BusinessPage from "./pages/BusinessPage";
 import ContactPage from "./pages/ContactPage";
 import LoginPage from "./pages/LoginPage";
+import ApplicationPage from "./pages/ApplicationPage";
+import ApplicationSuccessPage from "./pages/ApplicationSuccessPage";
 
 function App() {
   return (
@@ -16,6 +18,14 @@ function App() {
       <Route
         path="/utbildningar/:id"
         element={<CourseDetailsPage />}
+      />
+      <Route
+        path="/ansok/:courseId"
+        element={<ApplicationPage />}
+      />
+      <Route
+        path="/ansokan-skickad/:id"
+        element={<ApplicationSuccessPage />}
       />
 
       <Route path="/om-chase" element={<AboutPage />} />
