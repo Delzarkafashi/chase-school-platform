@@ -77,12 +77,12 @@ function CourseDetailsPage() {
 
                 <div className="course-details-actions">
                   {course.isOpenForApplication && (
-                    <a
-                      className="course-apply-button"
-                      href="#ansok"
+                    <Link
+                    className="course-apply-button"
+                    to={`/ansok/${course.id}`}
                     >
-                      Ansök till utbildningen
-                    </a>
+                    Ansök till utbildningen
+                    </Link>
                   )}
                 </div>
               </div>
