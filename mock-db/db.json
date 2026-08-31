@@ -302,5 +302,41 @@
   "assignments": [],
   "quizzes": [],
   "progress": [],
-  "warnings": []
+  "warnings": [],
+  "aboutContent": [
+  {
+    "id": "hero",
+    "section": "hero",
+    "eyebrow": "OM CHASE",
+    "title": "Vi utbildar framtidens IT-kompetens.",
+    "text": "Chase grundades 2017 ur IT-branschens behov av rätt kompetens. Sedan starten har skolan utvecklat utbildningar med tydlig koppling till arbetslivet och fokus på den kunskap som efterfrågas i en snabbt föränderlig bransch.",
+    "image": "http://localhost:3001/images/about/chase-school.png"
+  },
+  {
+    "id": "history",
+    "section": "history",
+    "eyebrow": "VÅR HISTORIA",
+    "title": "Från IT-branschens behov till en modern yrkeshögskola.",
+    "text": "Chase startade 2017 med ambitionen att skapa utbildningar som ligger nära den verklighet studerande möter efter examen. Den första utbildningen var inriktad mot fullstackutveckling och sedan dess har skolan fortsatt utveckla utbildningar inom olika delar av IT och digital utveckling.",
+    "image": "http://localhost:3001/images/about/chase-history.png"
+  },
+  {
+    "id": "industry",
+    "section": "industry",
+    "eyebrow": "NÄRA IT-BRANSCHEN",
+    "title": "Utbildningar formade tillsammans med arbetslivet.",
+    "text": "Chase har sina rötter i IT-branschen och utvecklar utbildningar med arbetslivets behov som utgångspunkt. Yrkesverksamma och representanter från olika delar av IT-sektorn bidrar med erfarenhet och perspektiv på vilken kompetens som efterfrågas. Det hjälper utbildningarna att fortsätta vara relevanta när tekniken och arbetsmarknaden förändras.",
+    "image": "http://localhost:3001/images/about/industry-collaboration.png"
+  },
+  {
+    "id": "student",
+    "section": "student",
+    "eyebrow": "STUDERA PÅ CHASE",
+    "title": "Praktiskt lärande med sikte på arbetslivet.",
+    "text": "Som studerande på Chase får du kombinera teori med praktiskt arbete och verklighetsnära uppgifter. Målet är att du inte bara ska förstå tekniken utan också kunna använda den i projekt, samarbeta med andra och vara förberedd för nästa steg i arbetslivet.",
+    "quote": "Det bästa är att få arbeta praktiskt och förstå hur det vi lär oss faktiskt används ute på företag.",
+    "quoteAuthor": "Studerande på Chase",
+    "image": "http://localhost:3001/images/about/chase-student.png"
+  }
+]
 }
