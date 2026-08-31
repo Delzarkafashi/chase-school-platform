@@ -6,6 +6,7 @@ import type { Course } from "../types/Course";
 import type { CourseFilters as CourseFiltersType } from "../types/CourseFilters";
 import { getCourses } from "../api/coursesApi";
 import "../styles/courses-page.css";
+import "../styles/courses.css";
 
 function CoursesPage() {
   const [courses, setCourses] = useState<Course[]>([]);
