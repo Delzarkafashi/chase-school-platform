@@ -1,557 +1,234 @@
-/* ========================================
-   CONTACT PAGE
-======================================== */
-
-.contact-page {
+.course-section {
   width: 100%;
+  padding: 96px 0 110px;
   background: #ffffff;
   color: #111111;
 }
 
-.contact-page-container {
+.course-section-container {
   width: 100%;
-  max-width: 1180px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 0 32px;
   box-sizing: border-box;
 }
 
-
-/* ========================================
-   HERO
-======================================== */
-
-.contact-hero {
-  padding: 72px 0 78px;
-  background: #f5f5f2;
+.course-section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 48px;
 }
 
-.contact-eyebrow {
+.course-section-eyebrow {
   display: inline-block;
-  margin-bottom: 16px;
-
-  font-size: 13px;
+  margin-bottom: 14px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 1.7px;
   color: #666666;
 }
 
-.contact-hero h1 {
-  max-width: 820px;
-  margin: 0;
-
-  font-size: clamp(48px, 6vw, 76px);
-  line-height: 1;
-  letter-spacing: -3px;
-  color: #111111;
-}
-
-.contact-hero p {
+.course-section-header h2 {
   max-width: 700px;
-  margin: 24px 0 0;
-
-  font-size: 18px;
-  line-height: 1.7;
-  color: #555555;
-}
-
-
-/* ========================================
-   MAIN CONTENT
-======================================== */
-
-.contact-content {
-  padding: 72px 0 110px;
-}
-
-
-/* ========================================
-   CONTACT FORM SECTION
-======================================== */
-
-.contact-form-section {
-  width: 100%;
-  max-width: 900px;
-}
-
-.contact-form-heading {
-  max-width: 650px;
-  margin-bottom: 32px;
-}
-
-.contact-form-heading > span {
-  display: inline-block;
-  margin-bottom: 12px;
-
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  color: #777777;
-}
-
-.contact-form-heading h2 {
   margin: 0;
-
-  font-size: clamp(36px, 4vw, 52px);
-  line-height: 1.05;
-  letter-spacing: -2px;
+  font-size: clamp(42px, 5vw, 64px);
+  line-height: 1;
+  letter-spacing: -2.8px;
   color: #111111;
 }
 
-.contact-form-heading p {
-  margin: 18px 0 0;
-
-  font-size: 17px;
-  line-height: 1.7;
-  color: #666666;
+.all-courses-link {
+  flex-shrink: 0;
+  padding-bottom: 5px;
+  color: #111111;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+  border-bottom: 1px solid #111111;
 }
 
+.all-courses-link:hover {
+  opacity: 0.65;
+}
 
-/* ========================================
-   FORM
-======================================== */
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
 
-.contact-form {
-  width: 100%;
-  padding: 36px;
-
+.course-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+  overflow: hidden;
   background: #f5f5f2;
   border: 1px solid #ecece8;
   border-radius: 24px;
-
   box-sizing: border-box;
-}
-
-.contact-form-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
-}
-
-.contact-form label {
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
-
-  min-width: 0;
-
-  font-size: 14px;
-  font-weight: 600;
-  color: #222222;
-}
-
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
-  width: 100%;
-  box-sizing: border-box;
-
-  padding: 14px 16px;
-
-  background: #ffffff;
-  color: #111111;
-
-  border: 1px solid #d6d6d2;
-  border-radius: 12px;
-
-  font: inherit;
-  font-size: 15px;
-  font-weight: 400;
-
-  outline: none;
-
-  transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.contact-form input {
-  min-height: 50px;
-}
-
-.contact-form select {
-  min-height: 50px;
-  cursor: pointer;
-}
-
-.contact-form textarea {
-  min-height: 170px;
-  resize: vertical;
-  line-height: 1.6;
-}
-
-.contact-form input:focus,
-.contact-form select:focus,
-.contact-form textarea:focus {
-  border-color: #111111;
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
-}
-
-.contact-form-full-width {
-  grid-column: 1 / -1;
-}
-
-
-/* ========================================
-   SUBMIT BUTTON
-======================================== */
-
-.contact-form-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  min-height: 54px;
-  margin-top: 30px;
-  padding: 0 28px;
-
-  background: #111111;
-  color: #ffffff;
-
-  border: none;
-  border-radius: 999px;
-
-  font-size: 15px;
-  font-weight: 700;
-
-  cursor: pointer;
-
-  transition:
-    transform 0.2s ease,
-    opacity 0.2s ease,
-    background 0.2s ease;
-}
-
-.contact-form-button:hover:not(:disabled) {
-  transform: translateY(-2px);
-  background: #292929;
-}
-
-.contact-form-button:disabled {
-  cursor: not-allowed;
-  opacity: 0.55;
-}
-
-
-/* ========================================
-   SUCCESS / ERROR
-======================================== */
-
-.contact-form-success,
-.contact-form-error {
-  margin-bottom: 24px;
-  padding: 16px 18px;
-
-  border-radius: 12px;
-
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.5;
-}
-
-.contact-form-success {
-  background: #eef7ee;
-  border: 1px solid #cfe3cf;
-  color: #245c24;
-}
-
-.contact-form-error {
-  background: #fff1f1;
-  border: 1px solid #efcccc;
-  color: #8b1f1f;
-}
-
-
-/* ========================================
-   CONTACT PEOPLE
-======================================== */
-
-.contact-people-section {
-  width: 100%;
-  margin-top: 120px;
-  padding-top: 80px;
-
-  border-top: 1px solid #e7e7e3;
-}
-
-.contact-people-heading {
-  max-width: 720px;
-  margin-bottom: 46px;
-}
-
-.contact-people-heading > span {
-  display: inline-block;
-  margin-bottom: 12px;
-
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  color: #777777;
-}
-
-.contact-people-heading h2 {
-  margin: 0;
-
-  font-size: clamp(36px, 4vw, 52px);
-  line-height: 1.05;
-  letter-spacing: -2px;
-  color: #111111;
-}
-
-.contact-people-heading p {
-  max-width: 620px;
-  margin: 18px 0 0;
-
-  font-size: 17px;
-  line-height: 1.7;
-  color: #666666;
-}
-
-
-/* ========================================
-   PEOPLE GRID
-======================================== */
-
-.contact-people-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 24px;
-}
-
-
-/* ========================================
-   PERSON CARD
-======================================== */
-
-.contact-person-card {
-  display: flex;
-  flex-direction: column;
-
-  min-width: 0;
-  overflow: hidden;
-
-  background: #f5f5f2;
-
-  border: 1px solid #ecece8;
-  border-radius: 22px;
-
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease,
     border-color 0.25s ease;
 }
 
-.contact-person-card:hover {
-  transform: translateY(-5px);
-
+.course-card:hover {
+  transform: translateY(-6px);
   border-color: #ddddda;
-
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
 }
 
-
-/* ========================================
-   PERSON IMAGE
-======================================== */
-
-.contact-person-image-wrapper {
+.course-card-image-wrapper {
   width: 100%;
-  height: 280px;
-
+  height: 220px;
   overflow: hidden;
-
   background: #e8e8e5;
 }
 
-.contact-person-image {
+.course-card-image {
   display: block;
-
   width: 100%;
   height: 100%;
-
   object-fit: cover;
   object-position: center;
-
   transition: transform 0.35s ease;
 }
 
-.contact-person-card:hover .contact-person-image {
-  transform: scale(1.03);
+.course-card:hover .course-card-image {
+  transform: scale(1.04);
 }
 
-
-/* ========================================
-   PERSON CONTENT
-======================================== */
-
-.contact-person-content {
+.course-card-content {
   display: flex;
   flex: 1;
   flex-direction: column;
-
-  padding: 24px;
+  width: 100%;
+  min-height: 330px;
+  padding: 30px;
+  box-sizing: border-box;
 }
 
-.contact-person-role {
+.course-category {
   display: inline-block;
   width: fit-content;
-
-  margin-bottom: 12px;
-  padding: 6px 10px;
-
+  margin-bottom: 22px;
+  padding: 7px 12px;
   background: #ffffff;
-
   border-radius: 999px;
-
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.7px;
   color: #555555;
 }
 
-.contact-person-content h3 {
+.course-card h3 {
   margin: 0;
-
-  font-size: 26px;
+  font-size: 30px;
   line-height: 1.1;
-  letter-spacing: -0.8px;
-
+  letter-spacing: -1.3px;
   color: #111111;
 }
 
-.contact-person-area {
-  margin: 12px 0 22px;
-
-  font-size: 14px;
-  line-height: 1.6;
+.course-card-content > p {
+  margin: 18px 0 0;
+  font-size: 16px;
+  line-height: 1.65;
   color: #666666;
 }
 
-
-/* ========================================
-   EMAIL / PHONE
-======================================== */
-
-.contact-person-links {
+.course-info {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 8px;
-
-  margin-top: auto;
+  margin-top: 28px;
 }
 
-.contact-person-links a {
-  width: fit-content;
-  max-width: 100%;
-
-  color: #111111;
-
-  text-decoration: none;
-
-  font-size: 14px;
+.course-info span {
+  padding: 7px 10px;
+  background: #ebebe7;
+  border-radius: 8px;
+  font-size: 12px;
   font-weight: 600;
-
-  overflow-wrap: anywhere;
+  color: #555555;
 }
 
-.contact-person-links a:hover {
-  text-decoration: underline;
+.course-card-link {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin-top: auto;
+  padding-top: 30px;
+  color: #111111;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
 }
 
+.course-card-link::after {
+  content: "→";
+  margin-left: 8px;
+  transition: transform 0.2s ease;
+}
 
-/* ========================================
-   TABLET
-======================================== */
+.course-card-link:hover::after {
+  transform: translateX(5px);
+}
 
-@media (max-width: 1050px) {
-  .contact-people-grid {
+@media (max-width: 1000px) {
+  .course-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .contact-person-image-wrapper {
-    height: 340px;
+  .course-section-header {
+    align-items: flex-start;
+    flex-direction: column;
   }
 }
 
+@media (max-width: 700px) {
+  .course-section {
+    padding: 72px 0 82px;
+  }
 
-/* ========================================
-   MOBILE
-======================================== */
-
-@media (max-width: 760px) {
-  .contact-page-container {
+  .course-section-container {
     padding: 0 20px;
   }
 
-  .contact-hero {
-    padding: 58px 0 64px;
+  .course-section-header {
+    margin-bottom: 36px;
   }
 
-  .contact-hero h1 {
-    letter-spacing: -2.3px;
-  }
-
-  .contact-hero p {
-    font-size: 17px;
-  }
-
-  .contact-content {
-    padding: 60px 0 80px;
-  }
-
-  .contact-form {
-    padding: 26px;
-  }
-
-  .contact-form-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .contact-form-full-width {
-    grid-column: auto;
-  }
-
-  .contact-form-button {
-    width: 100%;
-  }
-
-  .contact-people-section {
-    margin-top: 80px;
-    padding-top: 60px;
-  }
-
-  .contact-people-heading {
-    margin-bottom: 32px;
-  }
-}
-
-
-/* ========================================
-   SMALL MOBILE
-======================================== */
-
-@media (max-width: 600px) {
-  .contact-people-grid {
+  .course-grid {
     grid-template-columns: 1fr;
   }
 
-  .contact-person-image-wrapper {
-    height: 380px;
+  .course-card-image-wrapper {
+    height: 240px;
+  }
+
+  .course-card-content {
+    min-height: 300px;
+    padding: 24px;
+  }
+
+  .course-card h3 {
+    font-size: 26px;
+  }
+
+  .all-courses-link {
+    width: fit-content;
   }
 }
 
-@media (max-width: 420px) {
-  .contact-form {
-    padding: 20px;
-    border-radius: 18px;
+@media (max-width: 480px) {
+  .course-card-image-wrapper {
+    height: 210px;
   }
 
-  .contact-person-image-wrapper {
-    height: 330px;
-  }
-
-  .contact-person-content {
-    padding: 22px;
+  .course-card-content {
+    min-height: 280px;
   }
 }
