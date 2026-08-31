@@ -1,10 +1,10 @@
 {
   "name": "mock-db",
   "version": "1.0.0",
-  "description": "",
+  "description": "Mock API for Chase School Platform",
   "main": "index.js",
   "scripts": {
-    "start": "json-server --watch course-db.json --port 3001"
+    "start": "json-server --watch db.json --port 3001"
   },
   "keywords": [],
   "author": "",

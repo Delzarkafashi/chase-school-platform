@@ -270,5 +270,37 @@
       "isFeatured": false,
       "isOpenForApplication": true
     }
-  ]
+  ],
+  "applications": [
+    {
+      "courseId": "1",
+      "courseName": "Frontend Developer",
+      "firstName": "weqwqe",
+      "lastName": "wqeqweq",
+      "personalNumber": "111111-1111",
+      "email": "dsdwaed@gmail.com",
+      "phone": "1232313213213",
+      "streetAddress": "aweaewae",
+      "postalCode": "12312",
+      "city": "kisa",
+      "highestEducation": "Gymnasium",
+      "currentOccupation": "Studerar",
+      "previousStudies": "21dawdawdawdawdwdad",
+      "hasBasicEligibility": true,
+      "eligibilityComment": "waewaewaeaweewa",
+      "motivation": "waewaeweawe",
+      "otherInformation": "weaewaewaeawe",
+      "acceptsPrivacyPolicy": true,
+      "status": "new",
+      "adminComment": "",
+      "createdAt": "2026-08-31T08:25:19.235Z",
+      "updatedAt": "2026-08-31T08:25:19.235Z",
+      "id": "ezLP931j_t0"
+    }
+  ],
+  "users": [],
+  "assignments": [],
+  "quizzes": [],
+  "progress": [],
+  "warnings": []
 }
