@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import Header from "../components/layout/Header";
+import Footer from "../components/layout/Footer";
 
 function ApplicationSuccessPage() {
   const { id } = useParams();
@@ -23,6 +24,7 @@ function ApplicationSuccessPage() {
           Tillbaka till utbildningarna
         </Link>
       </main>
+      <Footer />
     </>
   );
 }

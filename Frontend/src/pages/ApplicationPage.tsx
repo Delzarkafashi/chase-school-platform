@@ -6,6 +6,7 @@ import type { Course } from "../types/Course";
 import { getCourseById } from "../api/coursesApi";
 import { createApplication } from "../api/applicationsApi";
 import "../styles/application-page.css";
+import Footer from "../components/layout/Footer";
 
 function ApplicationPage() {
   const { courseId } = useParams();
@@ -428,6 +429,7 @@ function ApplicationPage() {
           </div>
         </section>
       </main>
+      <Footer />
     </>
   );
 }
