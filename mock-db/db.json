@@ -424,5 +424,38 @@
       "id": "MQTh-LKeYKM"
     }
   ],
-  "$schema": "./node_modules/json-server/schema.json"
+  "businessContent": [
+    {
+      "id": "hero",
+      "section": "hero",
+      "eyebrow": "FÖR FÖRETAG",
+      "title": "Bygg framtidens kompetens tillsammans med Chase.",
+      "text": "Genom att samarbeta med Chase får företag möjlighet att möta framtidens IT-kompetens, bidra till utbildningarnas utveckling och skapa relationer med våra studerande.",
+      "image": "http://localhost:3001/images/business/business-hero.png"
+    },
+    {
+      "id": "lia",
+      "section": "lia",
+      "eyebrow": "LIA",
+      "title": "Ge en studerande erfarenhet från verkligheten.",
+      "text": "Genom LIA får våra studerande möjlighet att omsätta sina kunskaper i praktiken samtidigt som företaget lär känna framtida kompetens.",
+      "image": "http://localhost:3001/images/business/lia.png"
+    },
+    {
+      "id": "industry",
+      "section": "industry",
+      "eyebrow": "SAMARBETA MED OSS",
+      "title": "Bidra med case, kunskap och erfarenhet.",
+      "text": "Företag kan bidra med verkliga case, gästföreläsningar och erfarenheter från branschen och på så sätt göra utbildningarna ännu mer relevanta.",
+      "image": "http://localhost:3001/images/business/industry.png"
+    },
+    {
+      "id": "recruitment",
+      "section": "recruitment",
+      "eyebrow": "REKRYTERING",
+      "title": "Möt framtidens IT-kompetens.",
+      "text": "Genom samarbetet med Chase får företag möjlighet att bygga relationer med studerande redan under utbildningen och hitta framtida medarbetare.",
+      "image": "http://localhost:3001/images/business/recruitment.png"
+    }
+  ]
 }
