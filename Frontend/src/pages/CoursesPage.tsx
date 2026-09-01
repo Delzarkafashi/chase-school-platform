@@ -7,6 +7,7 @@ import type { CourseFilters as CourseFiltersType } from "../types/CourseFilters"
 import { getCourses } from "../api/coursesApi";
 import "../styles/courses-page.css";
 import "../styles/courses.css";
+import Footer from "../components/layout/Footer";
 
 function CoursesPage() {
   const [courses, setCourses] = useState<Course[]>([]);
@@ -149,6 +150,7 @@ function CoursesPage() {
           </div>
         </section>
       </main>
+      <Footer />
     </>
   );
 }

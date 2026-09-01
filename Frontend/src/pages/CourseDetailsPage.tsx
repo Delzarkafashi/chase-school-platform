@@ -4,6 +4,7 @@ import Header from "../components/layout/Header";
 import type { Course } from "../types/Course";
 import { getCourseById } from "../api/coursesApi";
 import "../styles/course-details.css";
+import Footer from "../components/layout/Footer";
 
 function CourseDetailsPage() {
   const { id } = useParams();
@@ -207,6 +208,7 @@ function CourseDetailsPage() {
           </>
         )}
       </main>
+      <Footer />
     </>
   );
 }
