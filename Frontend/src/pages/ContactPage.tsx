@@ -2,6 +2,7 @@ import Header from "../components/layout/Header";
 import ContactForm from "../components/contact/ContactForm";
 import ContactPeople from "../components/contact/ContactPeople";
 import "../styles/contact-page.css";
+import Footer from "../components/layout/Footer";
 
 function ContactPage() {
   return (
@@ -33,6 +34,7 @@ function ContactPage() {
           </div>
         </section>
       </main>
+      <Footer />
     </>
   );
 }

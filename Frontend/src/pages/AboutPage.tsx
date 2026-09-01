@@ -4,6 +4,7 @@ import AboutSection from "../components/about/AboutSection";
 import type { AboutContent } from "../types/AboutContent";
 import { getAboutContent } from "../api/aboutApi";
 import "../styles/about-page.css";
+import Footer from "../components/layout/Footer";
 
 function AboutPage() {
   const [content, setContent] = useState<AboutContent[]>([]);
@@ -52,6 +53,8 @@ function AboutPage() {
             />
           ))}
       </main>
+
+      <Footer />
     </>
   );
 }

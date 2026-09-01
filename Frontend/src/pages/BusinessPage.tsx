@@ -4,6 +4,7 @@ import BusinessSection from "../components/business/BusinessSection";
 import type { BusinessContent } from "../types/BusinessContent";
 import { getBusinessContent } from "../api/businessApi";
 import "../styles/business-page.css";
+import Footer from "../components/layout/Footer";
 
 function BusinessPage() {
   const [content, setContent] = useState<BusinessContent[]>([]);
@@ -52,6 +53,7 @@ function BusinessPage() {
             />
           ))}
       </main>
+      <Footer />
     </>
   );
 }
