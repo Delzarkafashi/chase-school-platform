@@ -298,6 +298,24 @@
       "id": "ezLP931j_t0"
     }
   ],
+  "contactContent": [
+    {
+      "id": "hero",
+      "section": "hero",
+      "eyebrow": "KONTAKT",
+      "title": "Hur kan vi hjälpa dig?",
+      "text": "Har du frågor om våra utbildningar, ansökan, behörighet, LIA eller samarbeten med Chase? Kontakta oss så hjälper vi dig vidare.",
+      "image": ""
+    },
+    {
+      "section": "weqewqeqwe",
+      "eyebrow": "weqwqewqe",
+      "title": "wqeqweqew",
+      "text": "wqewqeqweqwwwwwweeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+      "image": "http://localhost:3001/images/courses/ai-machine-learning.png",
+      "id": "E88BUvFRgi8"
+    }
+  ],
   "users": [
     {
       "id": "1",
