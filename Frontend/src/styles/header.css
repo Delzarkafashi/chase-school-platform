@@ -168,6 +168,40 @@
   transform: translateY(-7px) rotate(-45deg);
 }
 
+.header-user-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #666666;
+}
+
+.logout-button {
+  border: 0;
+  background: transparent;
+  color: #111111;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+.logout-button:hover {
+  opacity: 0.65;
+}
+
+.mobile-logout-button {
+  padding: 18px 0;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #eeeeee;
+  color: #111111;
+  text-align: left;
+  font: inherit;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
 /* Mobile menu */
 
 .mobile-menu {

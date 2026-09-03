@@ -1,12 +1,19 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "../../styles/header.css";
+import { useAuth } from "../../context/AuthContext";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { user, isAuthenticated, logout } = useAuth();
 
   function closeMenu() {
     setMenuOpen(false);
+  }
+
+  function handleLogout() {
+    logout();
+    closeMenu();
   }
 
   return (
@@ -24,25 +31,50 @@ function Header() {
         </nav>
 
         <div className="header-actions">
-          <NavLink className="login-link" to="/login">
-            Logga in
-          </NavLink>
+          {isAuthenticated && user ? (
+            <>
+              <span className="header-user-name">
+                {user.firstName} {user.lastName}
+              </span>
 
-          <NavLink className="apply-button" to="/utbildningar">
-            Ansök nu
-          </NavLink>
+              <Link className="login-link" to="/dashboard">
+                Dashboard
+              </Link>
 
-          <button
-            className={`menu-button ${menuOpen ? "open" : ""}`}
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Öppna meny"
-            aria-expanded={menuOpen}
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
+              <button
+                className="logout-button"
+                type="button"
+                onClick={handleLogout}
+              >
+                Logga ut
+              </button>
+            </>
+          ) : (
+            <>
+              <Link className="login-link" to="/login">
+                Logga in
+              </Link>
+
+              <Link
+                className="apply-button"
+                to="/utbildningar"
+              >
+                Ansök nu
+              </Link>
+            </>
+          )}
         </div>
+
+        <button
+          className={`menu-button ${menuOpen ? "open" : ""}`}
+          type="button"
+          aria-label="Öppna meny"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
       </div>
 
       <nav className={`mobile-menu ${menuOpen ? "open" : ""}`}>
@@ -62,13 +94,29 @@ function Header() {
           Kontakt
         </NavLink>
 
-        <NavLink
-          className="mobile-login-link"
-          to="/login"
-          onClick={closeMenu}
-        >
-          Logga in
-        </NavLink>
+        {isAuthenticated && user ? (
+          <>
+            <NavLink to="/dashboard" onClick={closeMenu}>
+              Dashboard
+            </NavLink>
+
+            <button
+              className="mobile-logout-button"
+              type="button"
+              onClick={handleLogout}
+            >
+              Logga ut
+            </button>
+          </>
+        ) : (
+          <NavLink
+            className="mobile-login-link"
+            to="/login"
+            onClick={closeMenu}
+          >
+            Logga in
+          </NavLink>
+        )}
       </nav>
     </header>
   );
