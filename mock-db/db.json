@@ -299,259 +299,444 @@
     }
   ],
   "users": [
-  {
-    "id": "1",
-    "firstName": "Anna",
-    "lastName": "Admin",
-    "email": "admin@chase.se",
-    "password": "admin123",
-    "roleId": 1,
-    "isActive": true
-  },
-  {
-    "id": "2",
-    "firstName": "Lars",
-    "lastName": "Lärare",
-    "email": "teacher@chase.se",
-    "password": "teacher123",
-    "roleId": 2,
-    "isActive": true
-  },
-  {
-    "id": "3",
-    "firstName": "Ella",
-    "lastName": "Elev",
-    "email": "student@chase.se",
-    "password": "student123",
-    "roleId": 3,
-    "isActive": true
-  },
-  {
-    "id": "4",
-    "firstName": "Viktor",
-    "lastName": "Viewer",
-    "email": "viewer@chase.se",
-    "password": "viewer123",
-    "roleId": 4,
-    "isActive": true
-  }
-],
-"roles": [
-  {
-    "id": 1,
-    "key": "admin",
-    "name": "Admin"
-  },
-  {
-    "id": 2,
-    "key": "teacher",
-    "name": "Lärare"
-  },
-  {
-    "id": 3,
-    "key": "student",
-    "name": "Elev"
-  },
-  {
-    "id": 4,
-    "key": "viewer",
-    "name": "Viewer"
-  }
-],
-"permissions": [
-  {
-    "id": 1,
-    "key": "users.view",
-    "name": "Visa användare"
-  },
-  {
-    "id": 2,
-    "key": "users.create",
-    "name": "Skapa användare"
-  },
-  {
-    "id": 3,
-    "key": "users.edit",
-    "name": "Redigera användare"
-  },
-  {
-    "id": 4,
-    "key": "users.delete",
-    "name": "Ta bort användare"
-  },
-  {
-    "id": 10,
-    "key": "courses.view",
-    "name": "Visa kurser"
-  },
-  {
-    "id": 11,
-    "key": "courses.create",
-    "name": "Skapa kurser"
-  },
-  {
-    "id": 12,
-    "key": "courses.edit",
-    "name": "Redigera kurser"
-  },
-  {
-    "id": 13,
-    "key": "courses.delete",
-    "name": "Ta bort kurser"
-  },
-  {
-    "id": 20,
-    "key": "applications.view",
-    "name": "Visa ansökningar"
-  },
-  {
-    "id": 21,
-    "key": "applications.manage",
-    "name": "Hantera ansökningar"
-  },
-  {
-    "id": 30,
-    "key": "contactMessages.view",
-    "name": "Visa kontaktärenden"
-  },
-  {
-    "id": 31,
-    "key": "contactMessages.manage",
-    "name": "Hantera kontaktärenden"
-  },
-  {
-    "id": 40,
-    "key": "students.view",
-    "name": "Visa elever"
-  },
-  {
-    "id": 41,
-    "key": "students.progress",
-    "name": "Visa elevprogression"
-  },
-  {
-    "id": 50,
-    "key": "assignments.view",
-    "name": "Visa uppgifter"
-  },
-  {
-    "id": 51,
-    "key": "assignments.create",
-    "name": "Skapa uppgifter"
-  },
-  {
-    "id": 52,
-    "key": "assignments.edit",
-    "name": "Redigera uppgifter"
-  },
-  {
-    "id": 53,
-    "key": "assignments.grade",
-    "name": "Bedöma uppgifter"
-  },
-  {
-    "id": 54,
-    "key": "assignments.submit",
-    "name": "Lämna in uppgifter"
-  },
-  {
-    "id": 60,
-    "key": "quizzes.view",
-    "name": "Visa quiz"
-  },
-  {
-    "id": 61,
-    "key": "quizzes.create",
-    "name": "Skapa quiz"
-  },
-  {
-    "id": 62,
-    "key": "quizzes.edit",
-    "name": "Redigera quiz"
-  },
-  {
-    "id": 63,
-    "key": "quizzes.grade",
-    "name": "Bedöma quiz"
-  },
-  {
-    "id": 64,
-    "key": "quizzes.take",
-    "name": "Genomföra quiz"
-  },
-  {
-    "id": 70,
-    "key": "warnings.view",
-    "name": "Visa varningar"
-  },
-  {
-    "id": 71,
-    "key": "warnings.manage",
-    "name": "Hantera varningar"
-  },
-  {
-    "id": 80,
-    "key": "reports.view",
-    "name": "Visa rapporter"
-  },
-  {
-    "id": 90,
-    "key": "siteContent.manage",
-    "name": "Hantera webbplatsinnehåll"
-  }
-],
-"rolePermissions": [
-  { "id": "1", "roleId": 1, "permissionId": 1 },
-  { "id": "2", "roleId": 1, "permissionId": 2 },
-  { "id": "3", "roleId": 1, "permissionId": 3 },
-  { "id": "4", "roleId": 1, "permissionId": 4 },
-  { "id": "5", "roleId": 1, "permissionId": 10 },
-  { "id": "6", "roleId": 1, "permissionId": 11 },
-  { "id": "7", "roleId": 1, "permissionId": 12 },
-  { "id": "8", "roleId": 1, "permissionId": 13 },
-  { "id": "9", "roleId": 1, "permissionId": 20 },
-  { "id": "10", "roleId": 1, "permissionId": 21 },
-  { "id": "11", "roleId": 1, "permissionId": 30 },
-  { "id": "12", "roleId": 1, "permissionId": 31 },
-  { "id": "13", "roleId": 1, "permissionId": 40 },
-  { "id": "14", "roleId": 1, "permissionId": 41 },
-  { "id": "15", "roleId": 1, "permissionId": 50 },
-  { "id": "16", "roleId": 1, "permissionId": 51 },
-  { "id": "17", "roleId": 1, "permissionId": 52 },
-  { "id": "18", "roleId": 1, "permissionId": 53 },
-  { "id": "19", "roleId": 1, "permissionId": 54 },
-  { "id": "20", "roleId": 1, "permissionId": 60 },
-  { "id": "21", "roleId": 1, "permissionId": 61 },
-  { "id": "22", "roleId": 1, "permissionId": 62 },
-  { "id": "23", "roleId": 1, "permissionId": 63 },
-  { "id": "24", "roleId": 1, "permissionId": 64 },
-  { "id": "25", "roleId": 1, "permissionId": 70 },
-  { "id": "26", "roleId": 1, "permissionId": 71 },
-  { "id": "27", "roleId": 1, "permissionId": 80 },
-  { "id": "28", "roleId": 1, "permissionId": 90 },
-
-  { "id": "29", "roleId": 2, "permissionId": 10 },
-  { "id": "30", "roleId": 2, "permissionId": 40 },
-  { "id": "31", "roleId": 2, "permissionId": 41 },
-  { "id": "32", "roleId": 2, "permissionId": 50 },
-  { "id": "33", "roleId": 2, "permissionId": 51 },
-  { "id": "34", "roleId": 2, "permissionId": 52 },
-  { "id": "35", "roleId": 2, "permissionId": 53 },
-  { "id": "36", "roleId": 2, "permissionId": 60 },
-  { "id": "37", "roleId": 2, "permissionId": 61 },
-  { "id": "38", "roleId": 2, "permissionId": 62 },
-  { "id": "39", "roleId": 2, "permissionId": 63 },
-  { "id": "40", "roleId": 2, "permissionId": 70 },
-  { "id": "41", "roleId": 2, "permissionId": 71 },
-
-  { "id": "42", "roleId": 3, "permissionId": 10 },
-  { "id": "43", "roleId": 3, "permissionId": 50 },
-  { "id": "44", "roleId": 3, "permissionId": 54 },
-  { "id": "45", "roleId": 3, "permissionId": 60 },
-  { "id": "46", "roleId": 3, "permissionId": 64 },
-
-  { "id": "47", "roleId": 4, "permissionId": 10 }
-],
+    {
+      "id": "1",
+      "firstName": "Anna",
+      "lastName": "Admin",
+      "email": "admin@chase.se",
+      "password": "admin123",
+      "roleId": 1,
+      "isActive": true
+    },
+    {
+      "id": "2",
+      "firstName": "Lars",
+      "lastName": "Lärare",
+      "email": "teacher@chase.se",
+      "password": "teacher123",
+      "roleId": 2,
+      "isActive": true
+    },
+    {
+      "id": "3",
+      "firstName": "Ella",
+      "lastName": "Elev",
+      "email": "student@chase.se",
+      "password": "student123",
+      "roleId": 3,
+      "isActive": true
+    },
+    {
+      "id": "4",
+      "firstName": "Viktor",
+      "lastName": "Viewer",
+      "email": "viewer@chase.se",
+      "password": "viewer123",
+      "roleId": 4,
+      "isActive": true
+    }
+  ],
+  "roles": [
+    {
+      "id": "1",
+      "key": "admin",
+      "name": "Admin"
+    },
+    {
+      "id": "2",
+      "key": "teacher",
+      "name": "Lärare"
+    },
+    {
+      "id": "3",
+      "key": "student",
+      "name": "Elev"
+    },
+    {
+      "id": "4",
+      "key": "viewer",
+      "name": "Viewer"
+    }
+  ],
+  "permissions": [
+    {
+      "id": "1",
+      "key": "users.view",
+      "name": "Visa användare"
+    },
+    {
+      "id": "2",
+      "key": "users.create",
+      "name": "Skapa användare"
+    },
+    {
+      "id": "3",
+      "key": "users.edit",
+      "name": "Redigera användare"
+    },
+    {
+      "id": "4",
+      "key": "users.delete",
+      "name": "Ta bort användare"
+    },
+    {
+      "id": "10",
+      "key": "courses.view",
+      "name": "Visa kurser"
+    },
+    {
+      "id": "11",
+      "key": "courses.create",
+      "name": "Skapa kurser"
+    },
+    {
+      "id": "12",
+      "key": "courses.edit",
+      "name": "Redigera kurser"
+    },
+    {
+      "id": "13",
+      "key": "courses.delete",
+      "name": "Ta bort kurser"
+    },
+    {
+      "id": "20",
+      "key": "applications.view",
+      "name": "Visa ansökningar"
+    },
+    {
+      "id": "21",
+      "key": "applications.manage",
+      "name": "Hantera ansökningar"
+    },
+    {
+      "id": "30",
+      "key": "contactMessages.view",
+      "name": "Visa kontaktärenden"
+    },
+    {
+      "id": "31",
+      "key": "contactMessages.manage",
+      "name": "Hantera kontaktärenden"
+    },
+    {
+      "id": "40",
+      "key": "students.view",
+      "name": "Visa elever"
+    },
+    {
+      "id": "41",
+      "key": "students.progress",
+      "name": "Visa elevprogression"
+    },
+    {
+      "id": "50",
+      "key": "assignments.view",
+      "name": "Visa uppgifter"
+    },
+    {
+      "id": "51",
+      "key": "assignments.create",
+      "name": "Skapa uppgifter"
+    },
+    {
+      "id": "52",
+      "key": "assignments.edit",
+      "name": "Redigera uppgifter"
+    },
+    {
+      "id": "53",
+      "key": "assignments.grade",
+      "name": "Bedöma uppgifter"
+    },
+    {
+      "id": "54",
+      "key": "assignments.submit",
+      "name": "Lämna in uppgifter"
+    },
+    {
+      "id": "60",
+      "key": "quizzes.view",
+      "name": "Visa quiz"
+    },
+    {
+      "id": "61",
+      "key": "quizzes.create",
+      "name": "Skapa quiz"
+    },
+    {
+      "id": "62",
+      "key": "quizzes.edit",
+      "name": "Redigera quiz"
+    },
+    {
+      "id": "63",
+      "key": "quizzes.grade",
+      "name": "Bedöma quiz"
+    },
+    {
+      "id": "64",
+      "key": "quizzes.take",
+      "name": "Genomföra quiz"
+    },
+    {
+      "id": "70",
+      "key": "warnings.view",
+      "name": "Visa varningar"
+    },
+    {
+      "id": "71",
+      "key": "warnings.manage",
+      "name": "Hantera varningar"
+    },
+    {
+      "id": "80",
+      "key": "reports.view",
+      "name": "Visa rapporter"
+    },
+    {
+      "id": "90",
+      "key": "siteContent.manage",
+      "name": "Hantera webbplatsinnehåll"
+    }
+  ],
+  "rolePermissions": [
+    {
+      "id": "1",
+      "roleId": 1,
+      "permissionId": 1
+    },
+    {
+      "id": "2",
+      "roleId": 1,
+      "permissionId": 2
+    },
+    {
+      "id": "3",
+      "roleId": 1,
+      "permissionId": 3
+    },
+    {
+      "id": "4",
+      "roleId": 1,
+      "permissionId": 4
+    },
+    {
+      "id": "5",
+      "roleId": 1,
+      "permissionId": 10
+    },
+    {
+      "id": "6",
+      "roleId": 1,
+      "permissionId": 11
+    },
+    {
+      "id": "7",
+      "roleId": 1,
+      "permissionId": 12
+    },
+    {
+      "id": "8",
+      "roleId": 1,
+      "permissionId": 13
+    },
+    {
+      "id": "9",
+      "roleId": 1,
+      "permissionId": 20
+    },
+    {
+      "id": "10",
+      "roleId": 1,
+      "permissionId": 21
+    },
+    {
+      "id": "11",
+      "roleId": 1,
+      "permissionId": 30
+    },
+    {
+      "id": "12",
+      "roleId": 1,
+      "permissionId": 31
+    },
+    {
+      "id": "13",
+      "roleId": 1,
+      "permissionId": 40
+    },
+    {
+      "id": "14",
+      "roleId": 1,
+      "permissionId": 41
+    },
+    {
+      "id": "15",
+      "roleId": 1,
+      "permissionId": 50
+    },
+    {
+      "id": "16",
+      "roleId": 1,
+      "permissionId": 51
+    },
+    {
+      "id": "17",
+      "roleId": 1,
+      "permissionId": 52
+    },
+    {
+      "id": "18",
+      "roleId": 1,
+      "permissionId": 53
+    },
+    {
+      "id": "19",
+      "roleId": 1,
+      "permissionId": 54
+    },
+    {
+      "id": "20",
+      "roleId": 1,
+      "permissionId": 60
+    },
+    {
+      "id": "21",
+      "roleId": 1,
+      "permissionId": 61
+    },
+    {
+      "id": "22",
+      "roleId": 1,
+      "permissionId": 62
+    },
+    {
+      "id": "23",
+      "roleId": 1,
+      "permissionId": 63
+    },
+    {
+      "id": "24",
+      "roleId": 1,
+      "permissionId": 64
+    },
+    {
+      "id": "25",
+      "roleId": 1,
+      "permissionId": 70
+    },
+    {
+      "id": "26",
+      "roleId": 1,
+      "permissionId": 71
+    },
+    {
+      "id": "27",
+      "roleId": 1,
+      "permissionId": 80
+    },
+    {
+      "id": "28",
+      "roleId": 1,
+      "permissionId": 90
+    },
+    {
+      "id": "29",
+      "roleId": 2,
+      "permissionId": 10
+    },
+    {
+      "id": "30",
+      "roleId": 2,
+      "permissionId": 40
+    },
+    {
+      "id": "31",
+      "roleId": 2,
+      "permissionId": 41
+    },
+    {
+      "id": "32",
+      "roleId": 2,
+      "permissionId": 50
+    },
+    {
+      "id": "33",
+      "roleId": 2,
+      "permissionId": 51
+    },
+    {
+      "id": "34",
+      "roleId": 2,
+      "permissionId": 52
+    },
+    {
+      "id": "35",
+      "roleId": 2,
+      "permissionId": 53
+    },
+    {
+      "id": "36",
+      "roleId": 2,
+      "permissionId": 60
+    },
+    {
+      "id": "37",
+      "roleId": 2,
+      "permissionId": 61
+    },
+    {
+      "id": "38",
+      "roleId": 2,
+      "permissionId": 62
+    },
+    {
+      "id": "39",
+      "roleId": 2,
+      "permissionId": 63
+    },
+    {
+      "id": "40",
+      "roleId": 2,
+      "permissionId": 70
+    },
+    {
+      "id": "41",
+      "roleId": 2,
+      "permissionId": 71
+    },
+    {
+      "id": "42",
+      "roleId": 3,
+      "permissionId": 10
+    },
+    {
+      "id": "43",
+      "roleId": 3,
+      "permissionId": 50
+    },
+    {
+      "id": "44",
+      "roleId": 3,
+      "permissionId": 54
+    },
+    {
+      "id": "45",
+      "roleId": 3,
+      "permissionId": 60
+    },
+    {
+      "id": "46",
+      "roleId": 3,
+      "permissionId": 64
+    },
+    {
+      "id": "47",
+      "roleId": 4,
+      "permissionId": 10
+    }
+  ],
   "assignments": [],
   "quizzes": [],
   "progress": [],
@@ -710,5 +895,6 @@
       "text": "Genom samarbetet med Chase får företag möjlighet att bygga relationer med studerande redan under utbildningen och hitta framtida medarbetare.",
       "image": "http://localhost:3001/images/business/recruitment.png"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
