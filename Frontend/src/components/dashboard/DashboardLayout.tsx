@@ -106,6 +106,12 @@ function DashboardLayout({
               Rapporter
             </NavLink>
           )}
+
+        {hasPermission("siteContent.manage") && (
+        <NavLink to="/dashboard/content">
+            Innehåll
+        </NavLink>
+        )}
         </nav>
 
         <button

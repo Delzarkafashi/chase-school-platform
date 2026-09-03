@@ -9,6 +9,8 @@ import LoginPage from "./pages/LoginPage";
 import ApplicationPage from "./pages/ApplicationPage";
 import ApplicationSuccessPage from "./pages/ApplicationSuccessPage";
 import DashboardPage from "./pages/DashboardPage";
+import ContentManagementPage from "./pages/ContentManagementPage";
+import AboutContentAdminPage from "./pages/AboutContentAdminPage";
 
 function App() {
   return (
@@ -33,6 +35,14 @@ function App() {
         element={<DashboardPage />}
       />
 
+      <Route
+        path="/dashboard/content"
+        element={<ContentManagementPage />}
+      />
+      <Route
+        path="/dashboard/content/about"
+        element={<AboutContentAdminPage />}
+      />
       <Route path="/om-chase" element={<AboutPage />} />
       <Route path="/foretag" element={<BusinessPage />} />
       <Route path="/kontakt" element={<ContactPage />} />

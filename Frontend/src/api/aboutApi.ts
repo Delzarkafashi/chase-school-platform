@@ -23,3 +23,58 @@ export async function getAboutSection(
 
   return response.json();
 }
+
+export async function updateAboutContent(
+  id: string,
+  content: AboutContent
+): Promise<AboutContent> {
+  const response = await fetch(
+    `${BASE_URL}/aboutContent/${id}`,
+    {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(content),
+    }
+  );
+
+  if (!response.ok) {
+    throw new Error("Kunde inte uppdatera innehållet.");
+  }
+
+  return response.json();
+}
+
+export async function createAboutContent(
+  content: Omit<AboutContent, "id">
+): Promise<AboutContent> {
+  const response = await fetch(`${BASE_URL}/aboutContent`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(content),
+  });
+
+  if (!response.ok) {
+    throw new Error("Kunde inte skapa innehållet.");
+  }
+
+  return response.json();
+}
+
+export async function deleteAboutContent(
+  id: string
+): Promise<void> {
+  const response = await fetch(
+    `${BASE_URL}/aboutContent/${id}`,
+    {
+      method: "DELETE",
+    }
+  );
+
+  if (!response.ok) {
+    throw new Error("Kunde inte ta bort innehållet.");
+  }
+}
