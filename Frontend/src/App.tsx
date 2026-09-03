@@ -11,6 +11,7 @@ import ApplicationSuccessPage from "./pages/ApplicationSuccessPage";
 import DashboardPage from "./pages/DashboardPage";
 import ContentManagementPage from "./pages/ContentManagementPage";
 import AboutContentAdminPage from "./pages/AboutContentAdminPage";
+import BusinessContentAdminPage from "./pages/BusinessContentAdminPage";
 
 function App() {
   return (
@@ -42,6 +43,11 @@ function App() {
       <Route
         path="/dashboard/content/about"
         element={<AboutContentAdminPage />}
+      />
+
+      <Route
+        path="/dashboard/content/business"
+        element={<BusinessContentAdminPage />}
       />
       <Route path="/om-chase" element={<AboutPage />} />
       <Route path="/foretag" element={<BusinessPage />} />
