@@ -8,6 +8,7 @@ import ContactPage from "./pages/ContactPage";
 import LoginPage from "./pages/LoginPage";
 import ApplicationPage from "./pages/ApplicationPage";
 import ApplicationSuccessPage from "./pages/ApplicationSuccessPage";
+import DashboardPage from "./pages/DashboardPage";
 
 function App() {
   return (
@@ -26,6 +27,10 @@ function App() {
       <Route
         path="/ansokan-skickad/:id"
         element={<ApplicationSuccessPage />}
+      />
+      <Route
+        path="/dashboard"
+        element={<DashboardPage />}
       />
 
       <Route path="/om-chase" element={<AboutPage />} />
