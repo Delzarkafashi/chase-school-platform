@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Header from "../components/layout/Header";
+import Footer from "../components/layout/Footer";
 import type { Course } from "../types/Course";
 import { getCourseById } from "../api/coursesApi";
 import "../styles/course-details.css";
-import Footer from "../components/layout/Footer";
 
 function CourseDetailsPage() {
   const { id } = useParams();
@@ -23,6 +23,12 @@ function CourseDetailsPage() {
 
       try {
         const data = await getCourseById(id);
+
+        if (!data.isActive) {
+          setError("Utbildningen är inte tillgänglig.");
+          return;
+        }
+
         setCourse(data);
       } catch {
         setError("Kunde inte hämta utbildningen.");
@@ -79,10 +85,10 @@ function CourseDetailsPage() {
                 <div className="course-details-actions">
                   {course.isOpenForApplication && (
                     <Link
-                    className="course-apply-button"
-                    to={`/ansok/${course.id}`}
+                      className="course-apply-button"
+                      to={`/ansok/${course.id}`}
                     >
-                    Ansök till utbildningen
+                      Ansök till utbildningen
                     </Link>
                   )}
                 </div>
@@ -199,15 +205,23 @@ function CourseDetailsPage() {
                     Ta nästa steg mot en karriär inom {course.category}.
                   </p>
 
-                  <button type="button">
-                    Ansök till {course.name}
-                  </button>
+                  {course.isOpenForApplication ? (
+                    <Link
+                      className="course-apply-button"
+                      to={`/ansok/${course.id}`}
+                    >
+                      Ansök till {course.name}
+                    </Link>
+                  ) : (
+                    <p>Ansökan till utbildningen är stängd.</p>
+                  )}
                 </div>
               </div>
             </section>
           </>
         )}
       </main>
+
       <Footer />
     </>
   );

@@ -39,7 +39,9 @@ function CoursesPage() {
     loadCourses();
   }, []);
 
-  const filteredCourses = courses.filter((course) => {
+  const activeCourses = courses.filter((course) => course.isActive);
+
+  const filteredCourses = activeCourses.filter((course) => {
     const searchTerm = filters.search.toLowerCase().trim();
 
     const matchesSearch =
@@ -124,9 +126,9 @@ function CoursesPage() {
             </div>
 
             <CourseFilters
-            filters={filters}
-            onChange={setFilters}
-            courses={courses}
+              filters={filters}
+              onChange={setFilters}
+              courses={activeCourses}
             />
 
             {loading && <p>Laddar utbildningar...</p>}
@@ -150,6 +152,7 @@ function CoursesPage() {
           </div>
         </section>
       </main>
+
       <Footer />
     </>
   );
