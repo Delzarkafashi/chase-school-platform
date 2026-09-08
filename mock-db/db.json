@@ -28,7 +28,7 @@
       "isOpenForApplication": true,
       "isActive": true,
       "createdAt": "2026-09-08T09:00:00.000Z",
-      "updatedAt": "2026-09-08T09:00:07.893Z"
+      "updatedAt": "2026-09-08T10:19:06.498Z"
     },
     {
       "id": "2",
@@ -58,7 +58,7 @@
       "isOpenForApplication": true,
       "isActive": true,
       "createdAt": "2026-08-14T09:45:00.000Z",
-      "updatedAt": "2026-09-02T13:20:00.000Z"
+      "updatedAt": "2026-09-08T09:48:57.105Z"
     },
     {
       "id": "3",
@@ -88,7 +88,7 @@
       "isOpenForApplication": true,
       "isActive": true,
       "createdAt": "2026-08-16T11:00:00.000Z",
-      "updatedAt": "2026-09-03T08:50:00.000Z"
+      "updatedAt": "2026-09-08T09:48:58.389Z"
     },
     {
       "id": "4",
@@ -114,11 +114,11 @@
         "Backendutvecklare"
       ],
       "image": "http://localhost:3001/images/courses/dotnet-developer.png",
-      "isFeatured": false,
+      "isFeatured": true,
       "isOpenForApplication": true,
       "isActive": true,
       "createdAt": "2026-08-20T12:25:00.000Z",
-      "updatedAt": "2026-09-05T09:35:00.000Z"
+      "updatedAt": "2026-09-08T09:48:59.597Z"
     },
     {
       "id": "5",
@@ -148,7 +148,7 @@
       "isOpenForApplication": true,
       "isActive": true,
       "createdAt": "2026-08-24T08:55:00.000Z",
-      "updatedAt": "2026-09-06T11:20:00.000Z"
+      "updatedAt": "2026-09-08T09:48:31.276Z"
     },
     {
       "id": "6",
@@ -174,11 +174,11 @@
         "Cloud Developer"
       ],
       "image": "http://localhost:3001/images/courses/cloud-devops.png",
-      "isFeatured": true,
+      "isFeatured": false,
       "isOpenForApplication": true,
       "isActive": true,
       "createdAt": "2026-08-26T13:05:00.000Z",
-      "updatedAt": "2026-09-06T16:40:00.000Z"
+      "updatedAt": "2026-09-08T09:48:27.655Z"
     },
     {
       "id": "7",
@@ -204,11 +204,11 @@
         "SOC Analyst"
       ],
       "image": "http://localhost:3001/images/courses/cyber-security.png",
-      "isFeatured": true,
+      "isFeatured": false,
       "isOpenForApplication": false,
       "isActive": true,
       "createdAt": "2026-08-28T09:30:00.000Z",
-      "updatedAt": "2026-09-07T10:15:00.000Z"
+      "updatedAt": "2026-09-08T09:48:26.470Z"
     },
     {
       "id": "8",
@@ -238,7 +238,7 @@
       "isOpenForApplication": true,
       "isActive": true,
       "createdAt": "2026-08-30T14:20:00.000Z",
-      "updatedAt": "2026-09-07T17:05:00.000Z"
+      "updatedAt": "2026-09-08T09:48:25.275Z"
     },
     {
       "id": "9",
@@ -264,11 +264,11 @@
         "Data Scientist"
       ],
       "image": "http://localhost:3001/images/courses/ai-machine-learning.png",
-      "isFeatured": true,
+      "isFeatured": false,
       "isOpenForApplication": true,
       "isActive": true,
       "createdAt": "2026-08-30T14:20:00.000Z",
-      "updatedAt": "2026-09-07T17:05:00.000Z"
+      "updatedAt": "2026-09-08T09:48:23.772Z"
     },
     {
       "id": "10",
@@ -298,7 +298,7 @@
       "isOpenForApplication": true,
       "isActive": true,
       "createdAt": "2026-08-30T14:20:00.000Z",
-      "updatedAt": "2026-09-07T17:05:00.000Z"
+      "updatedAt": "2026-09-08T09:48:22.527Z"
     }
   ],
   "applications": [
