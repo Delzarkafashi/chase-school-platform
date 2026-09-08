@@ -34,7 +34,8 @@ function ContentManagementPage() {
             <span>UTBILDNINGAR</span>
             <h2>Utbildningar</h2>
             <p>
-              Hantera utbildningar, ansökningsstatus, datum och information.
+              Välj vilka utbildningar som ska lyftas fram på den publika
+              webbplatsen.
             </p>
           </Link>
 

@@ -14,6 +14,7 @@ import AboutContentAdminPage from "./pages/AboutContentAdminPage";
 import BusinessContentAdminPage from "./pages/BusinessContentAdminPage";
 import ContactContentAdminPage from "./pages/ContactContentAdminPage";
 import CourseContentAdminPage from "./pages/CourseContentAdminPage";
+import CourseDisplayAdminPage from "./pages/CourseDisplayAdminPage";
 
 function App() {
   return (
@@ -59,6 +60,10 @@ function App() {
       <Route
         path="/dashboard/courses"
         element={<CourseContentAdminPage />}
+      />
+      <Route
+        path="/dashboard/content/courses"
+        element={<CourseDisplayAdminPage />}
       />
       <Route path="/om-chase" element={<AboutPage />} />
       <Route path="/foretag" element={<BusinessPage />} />
