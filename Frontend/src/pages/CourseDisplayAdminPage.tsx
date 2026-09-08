@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getCourses, updateCourse } from "../api/coursesApi";
 import type { Course } from "../types/Course";
+import DashboardLayout from "../components/dashboard/DashboardLayout";
 import "../styles/course-display-admin.css";
 
 function CourseDisplayAdminPage() {
@@ -69,127 +70,131 @@ function CourseDisplayAdminPage() {
 
   if (loading) {
     return (
-      <div className="course-display-admin">
-        <p>Laddar utbildningar...</p>
-      </div>
+      <DashboardLayout>
+        <div className="course-display-admin">
+          <p>Laddar utbildningar...</p>
+        </div>
+      </DashboardLayout>
     );
   }
 
   return (
-    <div className="course-display-admin">
-      <div className="course-display-admin-header">
-        <p className="course-display-admin-eyebrow">
-          INNEHÅLL
-        </p>
+    <DashboardLayout>
+      <div className="course-display-admin">
+        <div className="course-display-admin-header">
+          <p className="course-display-admin-eyebrow">
+            INNEHÅLL / UTBILDNINGAR
+          </p>
 
-        <h1>Utbildningar på webbplatsen</h1>
+          <h1>Utbildningar på webbplatsen</h1>
 
-        <p>
-          Välj vilka utbildningar som ska visas på utbildningssidan och vilka
-          som ska lyftas fram på startsidan.
-        </p>
-      </div>
-
-      {error && (
-        <div className="course-display-admin-error">
-          {error}
+          <p>
+            Välj vilka utbildningar som ska visas på utbildningssidan och vilka
+            som ska lyftas fram på startsidan.
+          </p>
         </div>
-      )}
 
-      <div className="course-display-admin-list">
-        {courses.map((course) => (
-          <article
-            key={course.id}
-            className="course-display-admin-card"
-          >
-            {course.image && (
-              <div className="course-display-admin-image">
-                <img
-                  src={course.image}
-                  alt={course.name}
-                />
-              </div>
-            )}
+        {error && (
+          <div className="course-display-admin-error">
+            {error}
+          </div>
+        )}
 
-            <div className="course-display-admin-content">
-              <div>
-                <span className="course-display-admin-category">
-                  {course.category}
-                </span>
+        <div className="course-display-admin-list">
+          {courses.map((course) => (
+            <article
+              key={course.id}
+              className="course-display-admin-card"
+            >
+              {course.image && (
+                <div className="course-display-admin-image">
+                  <img
+                    src={course.image}
+                    alt={course.name}
+                  />
+                </div>
+              )}
 
-                <h3>{course.name}</h3>
+              <div className="course-display-admin-content">
+                <div>
+                  <span className="course-display-admin-category">
+                    {course.category}
+                  </span>
 
-                <p className="course-display-admin-description">
-                  {course.shortDescription}
-                </p>
+                  <h3>{course.name}</h3>
 
-                <div className="course-display-admin-meta">
-                  <span
-                    className={`course-display-admin-status ${
-                      course.isActive
-                        ? "course-display-admin-status-active"
-                        : ""
-                    }`}
+                  <p className="course-display-admin-description">
+                    {course.shortDescription}
+                  </p>
+
+                  <div className="course-display-admin-meta">
+                    <span
+                      className={`course-display-admin-status ${
+                        course.isActive
+                          ? "course-display-admin-status-active"
+                          : ""
+                      }`}
+                    >
+                      {course.isActive
+                        ? "Visas på utbildningssidan"
+                        : "Dold från utbildningssidan"}
+                    </span>
+
+                    <span
+                      className={`course-display-admin-status ${
+                        course.isFeatured
+                          ? "course-display-admin-status-active"
+                          : ""
+                      }`}
+                    >
+                      {course.isFeatured
+                        ? "Visas på startsidan"
+                        : "Visas inte på startsidan"}
+                    </span>
+
+                    <span className="course-display-admin-meta-item">
+                      {course.studyPace}
+                    </span>
+
+                    <span className="course-display-admin-meta-item">
+                      {course.location}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="course-display-admin-actions">
+                  <button
+                    type="button"
+                    className="course-display-admin-secondary-button"
+                    disabled={savingId === course.id}
+                    onClick={() => handleActiveChange(course)}
                   >
-                    {course.isActive
-                      ? "Visas på utbildningssidan"
-                      : "Dold från utbildningssidan"}
-                  </span>
+                    {savingId === course.id
+                      ? "Sparar..."
+                      : course.isActive
+                        ? "Dölj från utbildningssidan"
+                        : "Visa på utbildningssidan"}
+                  </button>
 
-                  <span
-                    className={`course-display-admin-status ${
-                      course.isFeatured
-                        ? "course-display-admin-status-active"
-                        : ""
-                    }`}
+                  <button
+                    type="button"
+                    className="course-display-admin-secondary-button"
+                    disabled={savingId === course.id}
+                    onClick={() => handleFeaturedChange(course)}
                   >
-                    {course.isFeatured
-                      ? "Visas på startsidan"
-                      : "Visas inte på startsidan"}
-                  </span>
-
-                  <span className="course-display-admin-meta-item">
-                    {course.studyPace}
-                  </span>
-
-                  <span className="course-display-admin-meta-item">
-                    {course.location}
-                  </span>
+                    {savingId === course.id
+                      ? "Sparar..."
+                      : course.isFeatured
+                        ? "Ta bort från startsidan"
+                        : "Visa på startsidan"}
+                  </button>
                 </div>
               </div>
-
-              <div className="course-display-admin-actions">
-                <button
-                  type="button"
-                  className="course-display-admin-secondary-button"
-                  disabled={savingId === course.id}
-                  onClick={() => handleActiveChange(course)}
-                >
-                  {savingId === course.id
-                    ? "Sparar..."
-                    : course.isActive
-                      ? "Dölj från utbildningssidan"
-                      : "Visa på utbildningssidan"}
-                </button>
-
-                <button
-                  type="button"
-                  className="course-display-admin-secondary-button"
-                  disabled={savingId === course.id}
-                  onClick={() => handleFeaturedChange(course)}
-                >
-                  {savingId === course.id
-                    ? "Sparar..."
-                    : course.isFeatured
-                      ? "Ta bort från startsidan"
-                      : "Visa på startsidan"}
-                </button>
-              </div>
-            </div>
-          </article>
-        ))}
+            </article>
+          ))}
+        </div>
       </div>
-    </div>
+    </DashboardLayout>
   );
 }
 

@@ -30,6 +30,16 @@ function DashboardLayout({
     navigate("/");
   }
 
+  function navLinkClass({
+    isActive,
+  }: {
+    isActive: boolean;
+  }) {
+    return isActive
+      ? "dashboard-nav-link active"
+      : "dashboard-nav-link";
+  }
+
   return (
     <div className="dashboard-layout">
       <header className="dashboard-mobile-header">
@@ -97,6 +107,7 @@ function DashboardLayout({
           <NavLink
             to="/dashboard"
             onClick={closeMenu}
+            className={navLinkClass}
             end
           >
             Översikt
@@ -106,6 +117,7 @@ function DashboardLayout({
             <NavLink
               to="/dashboard/users"
               onClick={closeMenu}
+              className={navLinkClass}
             >
               Användare
             </NavLink>
@@ -115,6 +127,7 @@ function DashboardLayout({
             <NavLink
               to="/dashboard/courses"
               onClick={closeMenu}
+              className={navLinkClass}
             >
               Utbildningar
             </NavLink>
@@ -124,6 +137,7 @@ function DashboardLayout({
             <NavLink
               to="/dashboard/applications"
               onClick={closeMenu}
+              className={navLinkClass}
             >
               Ansökningar
             </NavLink>
@@ -133,6 +147,7 @@ function DashboardLayout({
             <NavLink
               to="/dashboard/contact-messages"
               onClick={closeMenu}
+              className={navLinkClass}
             >
               Kontaktärenden
             </NavLink>
@@ -142,6 +157,7 @@ function DashboardLayout({
             <NavLink
               to="/dashboard/students"
               onClick={closeMenu}
+              className={navLinkClass}
             >
               Elever
             </NavLink>
@@ -151,6 +167,7 @@ function DashboardLayout({
             <NavLink
               to="/dashboard/assignments"
               onClick={closeMenu}
+              className={navLinkClass}
             >
               Uppgifter
             </NavLink>
@@ -160,6 +177,7 @@ function DashboardLayout({
             <NavLink
               to="/dashboard/quizzes"
               onClick={closeMenu}
+              className={navLinkClass}
             >
               Quiz
             </NavLink>
@@ -169,6 +187,7 @@ function DashboardLayout({
             <NavLink
               to="/dashboard/warnings"
               onClick={closeMenu}
+              className={navLinkClass}
             >
               Varningar
             </NavLink>
@@ -178,6 +197,7 @@ function DashboardLayout({
             <NavLink
               to="/dashboard/reports"
               onClick={closeMenu}
+              className={navLinkClass}
             >
               Rapporter
             </NavLink>
@@ -187,6 +207,7 @@ function DashboardLayout({
             <NavLink
               to="/dashboard/content"
               onClick={closeMenu}
+              className={navLinkClass}
             >
               Innehåll
             </NavLink>

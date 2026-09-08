@@ -455,3 +455,23 @@
     width: calc(100vw - 20px);
   }
 }
+.dashboard-nav-link {
+  display: block;
+  padding: 12px 14px;
+  border-radius: 10px;
+
+  color: var(--dashboard-nav-text);
+  text-decoration: none;
+
+  transition: var(--transition-fast);
+}
+
+.dashboard-nav-link:hover {
+  background: var(--dashboard-nav-hover);
+  color: var(--text-light);
+}
+
+.dashboard-nav-link.active {
+  background: var(--bg-main);
+  color: var(--text-main);
+}

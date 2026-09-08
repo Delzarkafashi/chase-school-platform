@@ -6,6 +6,7 @@ import {
   getCourses,
   updateCourse,
 } from "../api/coursesApi";
+import DashboardLayout from "../components/dashboard/DashboardLayout";
 import "../styles/course-content-admin.css";
 
 type CourseFormData = Omit<Course, "id">;
@@ -223,485 +224,491 @@ export default function CourseContentAdminPage() {
   }
 
   return (
-    <div className="content-admin-page course-admin-page">
-      <div className="content-admin-header">
-        <div>
-          <p className="content-admin-eyebrow">
-            INNEHÅLLSHANTERING
-          </p>
+    <DashboardLayout>
+      <div className="content-admin-page course-admin-page">
+        <div className="content-admin-header">
+          <div>
+            <p className="content-admin-eyebrow">
+              INNEHÅLLSHANTERING
+            </p>
 
-          <h1>Utbildningar</h1>
+            <h1>Utbildningar</h1>
 
-          <p>
-            Skapa, redigera och ta bort utbildningar som visas
-            på Chase webbplats.
-          </p>
-        </div>
-
-        {!showForm && (
-          <button
-            className="content-admin-primary-button"
-            onClick={handleCreate}
-          >
-            + Lägg till utbildning
-          </button>
-        )}
-      </div>
-
-      {error && (
-        <div className="content-admin-error">
-          {error}
-        </div>
-      )}
-
-      {showForm && (
-        <section className="content-admin-form-section">
-          <div className="content-admin-section-header">
-            <div>
-              <h2>
-                {editingId
-                  ? "Redigera utbildning"
-                  : "Lägg till utbildning"}
-              </h2>
-
-              <p>
-                Fyll i informationen som ska visas på
-                utbildningens sida.
-              </p>
-            </div>
+            <p>
+              Skapa, redigera och ta bort utbildningar som visas
+              på Chase webbplats.
+            </p>
           </div>
 
-          <form
-            className="content-admin-form"
-            onSubmit={handleSubmit}
-          >
-            <div className="content-admin-form-grid">
-              <div className="content-admin-field">
-                <label htmlFor="name">
-                  Utbildningens namn
-                </label>
+          {!showForm && (
+            <button
+              type="button"
+              className="content-admin-primary-button"
+              onClick={handleCreate}
+            >
+              + Lägg till utbildning
+            </button>
+          )}
+        </div>
 
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                />
+        {error && (
+          <div className="content-admin-error">
+            {error}
+          </div>
+        )}
+
+        {showForm && (
+          <section className="content-admin-form-section">
+            <div className="content-admin-section-header">
+              <div>
+                <h2>
+                  {editingId
+                    ? "Redigera utbildning"
+                    : "Lägg till utbildning"}
+                </h2>
+
+                <p>
+                  Fyll i informationen som ska visas på
+                  utbildningens sida.
+                </p>
               </div>
+            </div>
 
-              <div className="content-admin-field">
-                <label htmlFor="category">
-                  Kategori
-                </label>
+            <form
+              className="content-admin-form"
+              onSubmit={handleSubmit}
+            >
+              <div className="content-admin-form-grid">
+                <div className="content-admin-field">
+                  <label htmlFor="name">
+                    Utbildningens namn
+                  </label>
 
-                <input
-                  id="category"
-                  name="category"
-                  type="text"
-                  value={formData.category}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
 
-              <div className="content-admin-field">
-                <label htmlFor="level">
-                  Utbildningsnivå
-                </label>
+                <div className="content-admin-field">
+                  <label htmlFor="category">
+                    Kategori
+                  </label>
 
-                <input
-                  id="level"
-                  name="level"
-                  type="text"
-                  value={formData.level}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
+                  <input
+                    id="category"
+                    name="category"
+                    type="text"
+                    value={formData.category}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
 
-              <div className="content-admin-field">
-                <label htmlFor="teacher">
-                  Lärare
-                </label>
+                <div className="content-admin-field">
+                  <label htmlFor="level">
+                    Utbildningsnivå
+                  </label>
 
-                <input
-                  id="teacher"
-                  name="teacher"
-                  type="text"
-                  value={formData.teacher}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
+                  <input
+                    id="level"
+                    name="level"
+                    type="text"
+                    value={formData.level}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
 
-              <div className="content-admin-field content-admin-field-full">
-                <label htmlFor="shortDescription">
-                  Kort beskrivning
-                </label>
+                <div className="content-admin-field">
+                  <label htmlFor="teacher">
+                    Lärare
+                  </label>
 
-                <textarea
-                  id="shortDescription"
-                  name="shortDescription"
-                  value={formData.shortDescription}
-                  onChange={handleChange}
-                  rows={3}
-                  required
-                />
-              </div>
+                  <input
+                    id="teacher"
+                    name="teacher"
+                    type="text"
+                    value={formData.teacher}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
 
-              <div className="content-admin-field content-admin-field-full">
-                <label htmlFor="description">
-                  Fullständig beskrivning
-                </label>
+                <div className="content-admin-field content-admin-field-full">
+                  <label htmlFor="shortDescription">
+                    Kort beskrivning
+                  </label>
 
-                <textarea
-                  id="description"
-                  name="description"
-                  value={formData.description}
-                  onChange={handleChange}
-                  rows={6}
-                  required
-                />
-              </div>
+                  <textarea
+                    id="shortDescription"
+                    name="shortDescription"
+                    value={formData.shortDescription}
+                    onChange={handleChange}
+                    rows={3}
+                    required
+                  />
+                </div>
 
-              <div className="content-admin-field">
-                <label htmlFor="duration">
-                  Längd
-                </label>
+                <div className="content-admin-field content-admin-field-full">
+                  <label htmlFor="description">
+                    Fullständig beskrivning
+                  </label>
 
-                <input
-                  id="duration"
-                  name="duration"
-                  type="text"
-                  value={formData.duration}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
+                  <textarea
+                    id="description"
+                    name="description"
+                    value={formData.description}
+                    onChange={handleChange}
+                    rows={6}
+                    required
+                  />
+                </div>
 
-              <div className="content-admin-field">
-                <label htmlFor="studyPace">
-                  Studietakt
-                </label>
+                <div className="content-admin-field">
+                  <label htmlFor="duration">
+                    Längd
+                  </label>
 
-                <select
-                  id="studyPace"
-                  name="studyPace"
-                  value={formData.studyPace}
-                  onChange={handleChange}
-                >
-                  <option value="100%">100%</option>
-                  <option value="75%">75%</option>
-                  <option value="50%">50%</option>
-                  <option value="25%">25%</option>
-                </select>
-              </div>
+                  <input
+                    id="duration"
+                    name="duration"
+                    type="text"
+                    value={formData.duration}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
 
-              <div className="content-admin-field">
-                <label htmlFor="studyForm">
-                  Studieform
-                </label>
+                <div className="content-admin-field">
+                  <label htmlFor="studyPace">
+                    Studietakt
+                  </label>
 
-                <select
-                  id="studyForm"
-                  name="studyForm"
-                  value={formData.studyForm}
-                  onChange={handleChange}
-                >
-                  <option value="På plats">
-                    På plats
-                  </option>
+                  <select
+                    id="studyPace"
+                    name="studyPace"
+                    value={formData.studyPace}
+                    onChange={handleChange}
+                  >
+                    <option value="100%">100%</option>
+                    <option value="75%">75%</option>
+                    <option value="50%">50%</option>
+                    <option value="25%">25%</option>
+                  </select>
+                </div>
 
-                  <option value="Hybrid">
-                    Hybrid
-                  </option>
+                <div className="content-admin-field">
+                  <label htmlFor="studyForm">
+                    Studieform
+                  </label>
 
-                  <option value="Distans">
-                    Distans
-                  </option>
-                </select>
-              </div>
+                  <select
+                    id="studyForm"
+                    name="studyForm"
+                    value={formData.studyForm}
+                    onChange={handleChange}
+                  >
+                    <option value="På plats">
+                      På plats
+                    </option>
 
-              <div className="content-admin-field">
-                <label htmlFor="location">
-                  Studieort
-                </label>
+                    <option value="Hybrid">
+                      Hybrid
+                    </option>
 
-                <input
-                  id="location"
-                  name="location"
-                  type="text"
-                  value={formData.location}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
+                    <option value="Distans">
+                      Distans
+                    </option>
+                  </select>
+                </div>
 
-              <div className="content-admin-field">
-                <label htmlFor="startDate">
-                  Startdatum
-                </label>
+                <div className="content-admin-field">
+                  <label htmlFor="location">
+                    Studieort
+                  </label>
 
-                <input
-                  id="startDate"
-                  name="startDate"
-                  type="date"
-                  value={formData.startDate}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
+                  <input
+                    id="location"
+                    name="location"
+                    type="text"
+                    value={formData.location}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
 
-              <div className="content-admin-field">
-                <label htmlFor="applicationDeadline">
-                  Sista ansökningsdag
-                </label>
+                <div className="content-admin-field">
+                  <label htmlFor="startDate">
+                    Startdatum
+                  </label>
 
-                <input
-                  id="applicationDeadline"
-                  name="applicationDeadline"
-                  type="date"
-                  value={formData.applicationDeadline}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
+                  <input
+                    id="startDate"
+                    name="startDate"
+                    type="date"
+                    value={formData.startDate}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
 
-              <div className="content-admin-field">
-                <label htmlFor="points">
-                  YH-poäng
-                </label>
+                <div className="content-admin-field">
+                  <label htmlFor="applicationDeadline">
+                    Sista ansökningsdag
+                  </label>
 
-                <input
-                  id="points"
-                  name="points"
-                  type="number"
-                  min="0"
-                  value={formData.points}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
+                  <input
+                    id="applicationDeadline"
+                    name="applicationDeadline"
+                    type="date"
+                    value={formData.applicationDeadline}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
 
-              <div className="content-admin-field">
-                <label htmlFor="language">
-                  Språk
-                </label>
+                <div className="content-admin-field">
+                  <label htmlFor="points">
+                    YH-poäng
+                  </label>
 
-                <input
-                  id="language"
-                  name="language"
-                  type="text"
-                  value={formData.language}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
+                  <input
+                    id="points"
+                    name="points"
+                    type="number"
+                    min="0"
+                    value={formData.points}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
 
-              <div className="content-admin-field content-admin-field-full">
-                <label htmlFor="requirements">
-                  Behörighetskrav
-                </label>
+                <div className="content-admin-field">
+                  <label htmlFor="language">
+                    Språk
+                  </label>
 
-                <textarea
-                  id="requirements"
-                  name="requirements"
-                  value={formData.requirements}
-                  onChange={handleChange}
-                  rows={4}
-                  required
-                />
-              </div>
+                  <input
+                    id="language"
+                    name="language"
+                    type="text"
+                    value={formData.language}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
 
-              <div className="content-admin-field content-admin-field-full">
-                <label htmlFor="careerOpportunities">
-                  Karriärmöjligheter
-                </label>
+                <div className="content-admin-field content-admin-field-full">
+                  <label htmlFor="requirements">
+                    Behörighetskrav
+                  </label>
 
-                <textarea
-                  id="careerOpportunities"
-                  value={careerText}
-                  onChange={(event) =>
-                    setCareerText(event.target.value)
-                  }
-                  rows={5}
-                  placeholder={`Frontendutvecklare
+                  <textarea
+                    id="requirements"
+                    name="requirements"
+                    value={formData.requirements}
+                    onChange={handleChange}
+                    rows={4}
+                    required
+                  />
+                </div>
+
+                <div className="content-admin-field content-admin-field-full">
+                  <label htmlFor="careerOpportunities">
+                    Karriärmöjligheter
+                  </label>
+
+                  <textarea
+                    id="careerOpportunities"
+                    value={careerText}
+                    onChange={(event) =>
+                      setCareerText(event.target.value)
+                    }
+                    rows={5}
+                    placeholder={`Frontendutvecklare
 Webbutvecklare
 Reactutvecklare`}
-                />
+                  />
 
-                <small>
-                  Skriv en yrkesroll per rad.
-                </small>
+                  <small>
+                    Skriv en yrkesroll per rad.
+                  </small>
+                </div>
+
+                <div className="content-admin-field content-admin-field-full">
+                  <label htmlFor="image">
+                    Bild
+                  </label>
+
+                  <input
+                    id="image"
+                    name="image"
+                    type="text"
+                    value={formData.image ?? ""}
+                    onChange={handleChange}
+                    placeholder="/images/courses/frontend-developer.png"
+                  />
+
+                  {formData.image && (
+                    <div className="content-admin-image-preview">
+                      <img
+                        src={formData.image}
+                        alt="Förhandsvisning"
+                      />
+                    </div>
+                  )}
+                </div>
               </div>
 
-              <div className="content-admin-field content-admin-field-full">
-                <label htmlFor="image">
-                  Bild
+              <div className="content-admin-checkboxes">
+                <label>
+                  <input
+                    type="checkbox"
+                    name="isFeatured"
+                    checked={formData.isFeatured}
+                    onChange={handleChange}
+                  />
+
+                  Visa som utvald utbildning
                 </label>
 
-                <input
-                  id="image"
-                  name="image"
-                  type="text"
-                  value={formData.image ?? ""}
-                  onChange={handleChange}
-                  placeholder="/images/courses/frontend-developer.png"
-                />
+                <label>
+                  <input
+                    type="checkbox"
+                    name="isOpenForApplication"
+                    checked={formData.isOpenForApplication}
+                    onChange={handleChange}
+                  />
 
-                {formData.image && (
-                  <div className="content-admin-image-preview">
-                    <img
-                      src={formData.image}
-                      alt="Förhandsvisning"
-                    />
-                  </div>
-                )}
+                  Öppen för ansökan
+                </label>
+
+                <label>
+                  <input
+                    type="checkbox"
+                    name="isActive"
+                    checked={formData.isActive}
+                    onChange={handleChange}
+                  />
+
+                  Aktiv utbildning
+                </label>
               </div>
+
+              <div className="content-admin-form-actions">
+                <button
+                  type="button"
+                  className="content-admin-secondary-button"
+                  onClick={handleCancel}
+                >
+                  Avbryt
+                </button>
+
+                <button
+                  type="submit"
+                  className="content-admin-primary-button"
+                  disabled={saving}
+                >
+                  {saving
+                    ? "Sparar..."
+                    : editingId
+                      ? "Spara ändringar"
+                      : "Skapa utbildning"}
+                </button>
+              </div>
+            </form>
+          </section>
+        )}
+
+        <section className="content-admin-list-section">
+          <div className="content-admin-section-header">
+            <div>
+              <h2>Befintliga utbildningar</h2>
+              <p>{courses.length} utbildningar</p>
             </div>
-
-            <div className="content-admin-checkboxes">
-              <label>
-                <input
-                  type="checkbox"
-                  name="isFeatured"
-                  checked={formData.isFeatured}
-                  onChange={handleChange}
-                />
-
-                Visa som utvald utbildning
-              </label>
-
-              <label>
-                <input
-                  type="checkbox"
-                  name="isOpenForApplication"
-                  checked={formData.isOpenForApplication}
-                  onChange={handleChange}
-                />
-
-                Öppen för ansökan
-              </label>
-
-              <label>
-                <input
-                  type="checkbox"
-                  name="isActive"
-                  checked={formData.isActive}
-                  onChange={handleChange}
-                />
-
-                Aktiv utbildning
-              </label>
-            </div>
-
-            <div className="content-admin-form-actions">
-              <button
-                type="button"
-                className="content-admin-secondary-button"
-                onClick={handleCancel}
-              >
-                Avbryt
-              </button>
-
-              <button
-                type="submit"
-                className="content-admin-primary-button"
-                disabled={saving}
-              >
-                {saving
-                  ? "Sparar..."
-                  : editingId
-                    ? "Spara ändringar"
-                    : "Skapa utbildning"}
-              </button>
-            </div>
-          </form>
-        </section>
-      )}
-
-      <section className="content-admin-list-section">
-        <div className="content-admin-section-header">
-          <div>
-            <h2>Befintliga utbildningar</h2>
-            <p>{courses.length} utbildningar</p>
           </div>
-        </div>
 
-        {loading ? (
-          <p>Laddar utbildningar...</p>
-        ) : courses.length === 0 ? (
-          <p>Det finns inga utbildningar ännu.</p>
-        ) : (
-          <div className="content-admin-list">
-            {courses.map((course) => (
-              <article
-                key={course.id}
-                className="content-admin-card"
-              >
-                {course.image && (
-                  <div className="content-admin-card-image">
-                    <img
-                      src={course.image}
-                      alt={course.name}
-                    />
-                  </div>
-                )}
+          {loading ? (
+            <p>Laddar utbildningar...</p>
+          ) : courses.length === 0 ? (
+            <p>Det finns inga utbildningar ännu.</p>
+          ) : (
+            <div className="content-admin-list">
+              {courses.map((course) => (
+                <article
+                  key={course.id}
+                  className="content-admin-card"
+                >
+                  {course.image && (
+                    <div className="content-admin-card-image">
+                      <img
+                        src={course.image}
+                        alt={course.name}
+                      />
+                    </div>
+                  )}
 
-                <div className="content-admin-card-content">
-                  <div>
-                    <span className="content-admin-card-eyebrow">
-                      {course.category}
-                    </span>
-
-                    <h3>{course.name}</h3>
-
-                    <p>{course.shortDescription}</p>
-
-                    <div className="content-admin-card-meta">
-                      <span>{course.location}</span>
-                      <span>{course.studyForm}</span>
-                      <span>
-                        {course.points} YH-poäng
+                  <div className="content-admin-card-content">
+                    <div>
+                      <span className="content-admin-card-eyebrow">
+                        {course.category}
                       </span>
-                      <span>
-                        {course.isOpenForApplication
-                          ? "Ansökan öppen"
-                          : "Ansökan stängd"}
-                      </span>
-                      <span>
-                        {course.isActive
-                          ? "Aktiv"
-                          : "Inaktiv"}
-                      </span>
+
+                      <h3>{course.name}</h3>
+
+                      <p>{course.shortDescription}</p>
+
+                      <div className="content-admin-card-meta">
+                        <span>{course.location}</span>
+                        <span>{course.studyForm}</span>
+
+                        <span>
+                          {course.points} YH-poäng
+                        </span>
+
+                        <span>
+                          {course.isOpenForApplication
+                            ? "Ansökan öppen"
+                            : "Ansökan stängd"}
+                        </span>
+
+                        <span>
+                          {course.isActive
+                            ? "Aktiv"
+                            : "Inaktiv"}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="content-admin-card-actions">
+                      <button
+                        type="button"
+                        className="content-admin-secondary-button"
+                        onClick={() => handleEdit(course)}
+                      >
+                        Redigera
+                      </button>
+
+                      <button
+                        type="button"
+                        className="content-admin-delete-button"
+                        onClick={() => handleDelete(course)}
+                      >
+                        Ta bort
+                      </button>
                     </div>
                   </div>
-
-                  <div className="content-admin-card-actions">
-                    <button
-                      type="button"
-                      className="content-admin-secondary-button"
-                      onClick={() => handleEdit(course)}
-                    >
-                      Redigera
-                    </button>
-
-                    <button
-                      type="button"
-                      className="content-admin-delete-button"
-                      onClick={() => handleDelete(course)}
-                    >
-                      Ta bort
-                    </button>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-        )}
-      </section>
-    </div>
+                </article>
+              ))}
+            </div>
+          )}
+        </section>
+      </div>
+    </DashboardLayout>
   );
 }
