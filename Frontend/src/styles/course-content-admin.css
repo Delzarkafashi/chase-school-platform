@@ -1,0 +1,515 @@
+.course-admin-page {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-bottom: 64px;
+}
+
+/* Header */
+
+.course-admin-page .content-admin-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.course-admin-page .content-admin-header > div {
+  max-width: 760px;
+}
+
+.course-admin-page .content-admin-eyebrow {
+  margin: 0 0 14px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  color: #777777;
+}
+
+.course-admin-page h1 {
+  margin: 0;
+  font-size: clamp(42px, 5vw, 62px);
+  line-height: 1;
+  letter-spacing: -2.5px;
+  color: #111111;
+}
+
+.course-admin-page .content-admin-header > div > p:last-child {
+  max-width: 700px;
+  margin: 20px 0 0;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #666666;
+}
+
+/* Knappar */
+
+.course-admin-page .content-admin-primary-button {
+  flex-shrink: 0;
+  min-height: 48px;
+  padding: 0 22px;
+  background: #111111;
+  color: #ffffff;
+  border: 1px solid #111111;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.course-admin-page
+  .content-admin-primary-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  background: #292929;
+}
+
+.course-admin-page .content-admin-primary-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.course-admin-page .content-admin-secondary-button {
+  min-height: 48px;
+  padding: 0 22px;
+  background: #ffffff;
+  color: #111111;
+  border: 1px solid #d8d8d3;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.course-admin-page .content-admin-secondary-button:hover {
+  background: #f8f8f6;
+  border-color: #111111;
+}
+
+.course-admin-page .content-admin-delete-button {
+  min-height: 48px;
+  padding: 0 20px;
+  background: #ffffff;
+  color: #b42318;
+  border: 1px solid #e5b8b4;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.course-admin-page .content-admin-delete-button:hover {
+  background: #fff3f2;
+  border-color: #b42318;
+}
+
+/* Felmeddelande */
+
+.course-admin-page .content-admin-error {
+  margin-bottom: 28px;
+  padding: 16px 18px;
+  background: #fff1f1;
+  border: 1px solid #efcccc;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #8b1f1f;
+}
+
+/* Formulär */
+
+.course-admin-page .content-admin-form-section {
+  margin-bottom: 60px;
+  padding: 32px;
+  background: #ffffff;
+  border: 1px solid #e5e5e0;
+  border-radius: 22px;
+}
+
+.course-admin-page .content-admin-section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.course-admin-page .content-admin-section-header h2 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  color: #111111;
+}
+
+.course-admin-page .content-admin-section-header p {
+  margin: 10px 0 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #666666;
+}
+
+.course-admin-page .content-admin-form {
+  display: block;
+}
+
+.course-admin-page .content-admin-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.course-admin-page .content-admin-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+}
+
+.course-admin-page .content-admin-field-full {
+  grid-column: 1 / -1;
+}
+
+.course-admin-page .content-admin-field label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #222222;
+}
+
+.course-admin-page .content-admin-field small {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #777777;
+}
+
+.course-admin-page .content-admin-field input,
+.course-admin-page .content-admin-field textarea,
+.course-admin-page .content-admin-field select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 16px;
+  background: #f9f9f7;
+  color: #111111;
+  border: 1px solid #d8d8d3;
+  border-radius: 12px;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 400;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.course-admin-page .content-admin-field input,
+.course-admin-page .content-admin-field select {
+  min-height: 50px;
+}
+
+.course-admin-page .content-admin-field textarea {
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.course-admin-page .content-admin-field input:focus,
+.course-admin-page .content-admin-field textarea:focus,
+.course-admin-page .content-admin-field select:focus {
+  background: #ffffff;
+  border-color: #111111;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Bild */
+
+.course-admin-page .content-admin-image-preview {
+  width: 100%;
+  max-width: 520px;
+  height: 260px;
+  overflow: hidden;
+  margin-top: 6px;
+  background: #f2f2ef;
+  border: 1px solid #e5e5e0;
+  border-radius: 16px;
+}
+
+.course-admin-page .content-admin-image-preview img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Checkboxar */
+
+.course-admin-page .content-admin-checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 28px;
+  margin-top: 30px;
+  padding: 22px 0;
+  border-top: 1px solid #ecece8;
+  border-bottom: 1px solid #ecece8;
+}
+
+.course-admin-page .content-admin-checkboxes label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 9px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #222222;
+  cursor: pointer;
+}
+
+.course-admin-page .content-admin-checkboxes input {
+  width: 17px;
+  height: 17px;
+  margin: 0;
+  accent-color: #111111;
+}
+
+/* Formulärknappar */
+
+.course-admin-page .content-admin-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+/* Lista */
+
+.course-admin-page .content-admin-list-section {
+  margin-top: 10px;
+}
+
+.course-admin-page .content-admin-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Kurskort */
+
+.course-admin-page .content-admin-card {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  padding: 0;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e5e5e0;
+  border-radius: 20px;
+}
+
+.course-admin-page .content-admin-card-image {
+  min-height: 220px;
+  background: #f2f2ef;
+}
+
+.course-admin-page .content-admin-card-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  object-fit: cover;
+}
+
+.course-admin-page .content-admin-card-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 28px;
+}
+
+.course-admin-page
+  .content-admin-card-content
+  > div:first-child {
+  flex: 1;
+  min-width: 0;
+}
+
+.course-admin-page .content-admin-card-eyebrow {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #777777;
+}
+
+.course-admin-page .content-admin-card h3 {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: -0.7px;
+  color: #111111;
+}
+
+.course-admin-page
+  .content-admin-card-content
+  > div:first-child
+  > p {
+  max-width: 620px;
+  margin: 12px 0 0;
+  font-size: 14px;
+  line-height: 1.65;
+  color: #666666;
+}
+
+/* Kursinfo */
+
+.course-admin-page .content-admin-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.course-admin-page .content-admin-card-meta span {
+  padding: 7px 10px;
+  background: #f5f5f2;
+  border: 1px solid #e5e5e0;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #555555;
+}
+
+/* Kortknappar */
+
+.course-admin-page .content-admin-card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.course-admin-page .content-admin-card-actions button {
+  min-width: 105px;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .course-admin-page .content-admin-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .course-admin-page .content-admin-card {
+    grid-template-columns: 190px minmax(0, 1fr);
+  }
+
+  .course-admin-page .content-admin-card-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .course-admin-page .content-admin-card-actions {
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .course-admin-page .content-admin-card-actions button {
+    flex: 1;
+  }
+}
+
+/* Mobil */
+
+@media (max-width: 700px) {
+  .course-admin-page .content-admin-header {
+    margin-bottom: 36px;
+  }
+
+  .course-admin-page .content-admin-primary-button {
+    width: 100%;
+  }
+
+  .course-admin-page .content-admin-form-section {
+    padding: 22px;
+    border-radius: 18px;
+  }
+
+  .course-admin-page .content-admin-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .course-admin-page .content-admin-field-full {
+    grid-column: auto;
+  }
+
+  .course-admin-page .content-admin-checkboxes {
+    flex-direction: column;
+  }
+
+  .course-admin-page .content-admin-form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .course-admin-page .content-admin-form-actions button {
+    width: 100%;
+  }
+
+  .course-admin-page .content-admin-card {
+    display: block;
+  }
+
+  .course-admin-page .content-admin-card-image {
+    min-height: 0;
+    height: 210px;
+  }
+
+  .course-admin-page .content-admin-card-image img {
+    min-height: 0;
+    height: 210px;
+  }
+
+  .course-admin-page .content-admin-card-content {
+    padding: 22px;
+  }
+
+  .course-admin-page .content-admin-card-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .course-admin-page .content-admin-card-actions button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .course-admin-page h1 {
+    font-size: 40px;
+    letter-spacing: -1.8px;
+  }
+
+  .course-admin-page .content-admin-form-section {
+    padding: 18px;
+  }
+
+  .course-admin-page .content-admin-card h3 {
+    font-size: 22px;
+  }
+
+  .course-admin-page .content-admin-card-image,
+  .course-admin-page .content-admin-card-image img {
+    height: 190px;
+  }
+}
