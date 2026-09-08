@@ -25,7 +25,10 @@
       ],
       "image": "http://localhost:3001/images/courses/frontend-developer.png",
       "isFeatured": true,
-      "isOpenForApplication": true
+      "isOpenForApplication": true,
+      "isActive": true,
+      "createdAt": "2026-09-08T09:00:00.000Z",
+      "updatedAt": "2026-09-08T09:00:07.893Z"
     },
     {
       "id": "2",
@@ -52,7 +55,10 @@
       ],
       "image": "http://localhost:3001/images/courses/backend-developer.png",
       "isFeatured": true,
-      "isOpenForApplication": true
+      "isOpenForApplication": true,
+      "isActive": true,
+      "createdAt": "2026-08-14T09:45:00.000Z",
+      "updatedAt": "2026-09-02T13:20:00.000Z"
     },
     {
       "id": "3",
@@ -79,7 +85,10 @@
       ],
       "image": "http://localhost:3001/images/courses/fullstack-javascript.png",
       "isFeatured": true,
-      "isOpenForApplication": true
+      "isOpenForApplication": true,
+      "isActive": true,
+      "createdAt": "2026-08-16T11:00:00.000Z",
+      "updatedAt": "2026-09-03T08:50:00.000Z"
     },
     {
       "id": "4",
@@ -106,7 +115,10 @@
       ],
       "image": "http://localhost:3001/images/courses/dotnet-developer.png",
       "isFeatured": false,
-      "isOpenForApplication": true
+      "isOpenForApplication": true,
+      "isActive": true,
+      "createdAt": "2026-08-20T12:25:00.000Z",
+      "updatedAt": "2026-09-05T09:35:00.000Z"
     },
     {
       "id": "5",
@@ -133,7 +145,10 @@
       ],
       "image": "http://localhost:3001/images/courses/java-developer.png",
       "isFeatured": false,
-      "isOpenForApplication": true
+      "isOpenForApplication": true,
+      "isActive": true,
+      "createdAt": "2026-08-24T08:55:00.000Z",
+      "updatedAt": "2026-09-06T11:20:00.000Z"
     },
     {
       "id": "6",
@@ -160,7 +175,10 @@
       ],
       "image": "http://localhost:3001/images/courses/cloud-devops.png",
       "isFeatured": true,
-      "isOpenForApplication": true
+      "isOpenForApplication": true,
+      "isActive": true,
+      "createdAt": "2026-08-26T13:05:00.000Z",
+      "updatedAt": "2026-09-06T16:40:00.000Z"
     },
     {
       "id": "7",
@@ -187,7 +205,10 @@
       ],
       "image": "http://localhost:3001/images/courses/cyber-security.png",
       "isFeatured": true,
-      "isOpenForApplication": false
+      "isOpenForApplication": false,
+      "isActive": true,
+      "createdAt": "2026-08-28T09:30:00.000Z",
+      "updatedAt": "2026-09-07T10:15:00.000Z"
     },
     {
       "id": "8",
@@ -214,7 +235,10 @@
       ],
       "image": "http://localhost:3001/images/courses/data-engineer.png",
       "isFeatured": false,
-      "isOpenForApplication": true
+      "isOpenForApplication": true,
+      "isActive": true,
+      "createdAt": "2026-08-30T14:20:00.000Z",
+      "updatedAt": "2026-09-07T17:05:00.000Z"
     },
     {
       "id": "9",
@@ -241,7 +265,10 @@
       ],
       "image": "http://localhost:3001/images/courses/ai-machine-learning.png",
       "isFeatured": true,
-      "isOpenForApplication": true
+      "isOpenForApplication": true,
+      "isActive": true,
+      "createdAt": "2026-08-30T14:20:00.000Z",
+      "updatedAt": "2026-09-07T17:05:00.000Z"
     },
     {
       "id": "10",
@@ -268,7 +295,10 @@
       ],
       "image": "http://localhost:3001/images/courses/ux-ui-designer.png",
       "isFeatured": false,
-      "isOpenForApplication": true
+      "isOpenForApplication": true,
+      "isActive": true,
+      "createdAt": "2026-08-30T14:20:00.000Z",
+      "updatedAt": "2026-09-07T17:05:00.000Z"
     }
   ],
   "applications": [

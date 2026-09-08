@@ -29,4 +29,9 @@ export type Course = {
   image?: string;
   isFeatured: boolean;
   isOpenForApplication: boolean;
+
+  // Administration
+  isActive: boolean;
+  createdAt: string;
+  updatedAt: string;
 };
