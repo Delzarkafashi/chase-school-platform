@@ -7,21 +7,18 @@
 .content-admin-page h1 {
   margin: 0;
   max-width: 850px;
-
   font-size: clamp(42px, 5vw, 62px);
   line-height: 1;
   letter-spacing: -2.5px;
-
-  color: #111111;
+  color: var(--text-main);
 }
 
 .content-admin-page > p {
   max-width: 700px;
   margin: 22px 0 0;
-
   font-size: 17px;
   line-height: 1.7;
-  color: #666666;
+  color: var(--text-secondary);
 }
 
 .content-admin-page-heading {
@@ -38,61 +35,50 @@
 .content-admin-page-heading p {
   max-width: 700px;
   margin: 22px 0 0;
-
   font-size: 17px;
   line-height: 1.7;
-  color: #666666;
+  color: var(--text-secondary);
 }
 
 .content-admin-create-button {
   flex-shrink: 0;
-
   min-height: 48px;
   padding: 0 22px;
-
-  background: #ffffff;
-  color: #111111;
-
-  border: 1px solid #d8d8d3;
+  background: var(--bg-main);
+  color: var(--text-main);
+  border: 1px solid var(--border-strong);
   border-radius: 999px;
-
   font-size: 14px;
   font-weight: 700;
-
   cursor: pointer;
-
   transition:
     border-color 0.2s ease,
     background 0.2s ease;
 }
 
 .content-admin-create-button:hover {
-  border-color: #111111;
-  background: #f8f8f6;
+  border-color: var(--text-main);
+  background: var(--bg-hover-soft);
 }
 
 .content-admin-sections {
   display: flex;
   flex-direction: column;
   gap: 30px;
-
   margin-top: 48px;
 }
 
 .content-admin-card {
   padding: 32px;
-
-  background: #ffffff;
-
-  border: 1px solid #e5e5e0;
+  background: var(--bg-main);
+  border: 1px solid var(--border-main);
   border-radius: 22px;
-
   box-sizing: border-box;
 }
 
 .content-admin-create-card {
   margin-top: 40px;
-  background: #f9f9f7;
+  background: var(--bg-soft);
 }
 
 .content-admin-card-heading {
@@ -100,47 +86,37 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: 24px;
-
   margin-bottom: 30px;
   padding-bottom: 24px;
-
-  border-bottom: 1px solid #ecece8;
+  border-bottom: 1px solid var(--border-light);
 }
 
 .content-admin-card-heading > div > span {
   display: inline-block;
   margin-bottom: 10px;
-
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 1.3px;
-
-  color: #777777;
+  color: var(--text-muted);
 }
 
 .content-admin-card-heading h2 {
   margin: 0;
-
   font-size: 28px;
   line-height: 1.15;
   letter-spacing: -1px;
-
-  color: #111111;
+  color: var(--text-main);
 }
 
 .content-admin-saved {
   flex-shrink: 0;
-
   padding: 7px 12px;
-
-  background: #eef7ee;
-  border: 1px solid #cfe3cf;
+  background: var(--bg-success);
+  border: 1px solid var(--border-success);
   border-radius: 999px;
-
   font-size: 12px;
   font-weight: 700;
-
-  color: #245c24;
+  color: var(--color-success);
 }
 
 .content-admin-form {
@@ -153,12 +129,10 @@
   display: flex;
   flex-direction: column;
   gap: 9px;
-
   min-width: 0;
-
   font-size: 14px;
   font-weight: 600;
-  color: #222222;
+  color: var(--text-label);
 }
 
 .content-admin-form label:nth-child(3),
@@ -170,21 +144,15 @@
 .content-admin-form textarea {
   width: 100%;
   box-sizing: border-box;
-
   padding: 14px 16px;
-
-  background: #f9f9f7;
-  color: #111111;
-
-  border: 1px solid #d8d8d3;
+  background: var(--bg-soft);
+  color: var(--text-main);
+  border: 1px solid var(--border-strong);
   border-radius: 12px;
-
   font: inherit;
   font-size: 15px;
   font-weight: 400;
-
   outline: none;
-
   transition:
     border-color 0.2s ease,
     box-shadow 0.2s ease,
@@ -203,57 +171,44 @@
 
 .content-admin-form input:focus,
 .content-admin-form textarea:focus {
-  background: #ffffff;
-  border-color: #111111;
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+  background: var(--bg-main);
+  border-color: var(--text-main);
+  box-shadow: var(--shadow-focus);
 }
 
 .content-admin-image-preview {
   grid-column: 1 / -1;
-
   width: 100%;
   max-width: 520px;
   height: 260px;
-
   overflow: hidden;
-
   margin-top: -8px;
-
-  background: #f2f2ef;
-
-  border: 1px solid #e5e5e0;
+  background: var(--bg-preview);
+  border: 1px solid var(--border-main);
   border-radius: 16px;
 }
 
 .content-admin-image-preview img {
   display: block;
-
   width: 100%;
   height: 100%;
-
   object-fit: cover;
   object-position: center;
 }
 
 .content-admin-save {
   grid-column: 1 / -1;
-
   width: fit-content;
   min-height: 50px;
   margin-top: 6px;
   padding: 0 24px;
-
-  background: #111111;
-  color: #ffffff;
-
+  background: var(--bg-dark);
+  color: var(--text-light);
   border: 0;
   border-radius: 999px;
-
   font-size: 14px;
   font-weight: 700;
-
   cursor: pointer;
-
   transition:
     transform 0.2s ease,
     background 0.2s ease,
@@ -262,7 +217,7 @@
 
 .content-admin-save:hover:not(:disabled) {
   transform: translateY(-2px);
-  background: #292929;
+  background: var(--button-hover);
 }
 
 .content-admin-save:disabled {
@@ -272,11 +227,9 @@
 
 .content-admin-actions {
   grid-column: 1 / -1;
-
   display: flex;
   align-items: center;
   gap: 12px;
-
   margin-top: 6px;
 }
 
@@ -288,18 +241,13 @@
 .content-admin-delete {
   min-height: 50px;
   padding: 0 24px;
-
-  background: #ffffff;
-  color: #b42318;
-
-  border: 1px solid #e5b8b4;
+  background: var(--bg-main);
+  color: var(--color-danger);
+  border: 1px solid var(--border-danger);
   border-radius: 999px;
-
   font-size: 14px;
   font-weight: 700;
-
   cursor: pointer;
-
   transition:
     background 0.2s ease,
     border-color 0.2s ease,
@@ -307,8 +255,8 @@
 }
 
 .content-admin-delete:hover:not(:disabled) {
-  background: #fff3f2;
-  border-color: #b42318;
+  background: var(--bg-danger);
+  border-color: var(--color-danger);
 }
 
 .content-admin-delete:disabled {
@@ -319,79 +267,62 @@
 .content-admin-error {
   margin-top: 28px;
   padding: 16px 18px;
-
-  background: #fff1f1;
-
-  border: 1px solid #efcccc;
+  background: var(--bg-error);
+  border: 1px solid var(--border-error);
   border-radius: 12px;
-
   font-size: 14px;
   font-weight: 600;
-
-  color: #8b1f1f;
+  color: var(--color-error);
 }
 
 .content-admin-modal-backdrop {
   position: fixed;
   inset: 0;
   z-index: 9999;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   padding: 24px;
-
-  background: rgba(0, 0, 0, 0.45);
+  background: var(--bg-overlay);
 }
 
 .content-admin-modal {
   width: 100%;
   max-width: 480px;
-
   padding: 32px;
-
-  background: #ffffff;
+  background: var(--bg-main);
   border-radius: 22px;
-
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.18);
+  box-shadow: var(--shadow-modal);
 }
 
 .content-admin-modal-eyebrow {
   display: inline-block;
   margin-bottom: 10px;
-
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 1.3px;
-
-  color: #8b1f1f;
+  color: var(--color-error);
 }
 
 .content-admin-modal h2 {
   margin: 0;
-
   font-size: 32px;
   line-height: 1.1;
   letter-spacing: -1.2px;
-
-  color: #111111;
+  color: var(--text-main);
 }
 
 .content-admin-modal p {
   margin: 18px 0 0;
-
   font-size: 15px;
   line-height: 1.7;
-
-  color: #666666;
+  color: var(--text-secondary);
 }
 
 .content-admin-modal-actions {
   display: flex;
   justify-content: flex-end;
   gap: 12px;
-
   margin-top: 28px;
 }
 
@@ -399,35 +330,30 @@
 .content-admin-modal-delete {
   min-height: 48px;
   padding: 0 20px;
-
   border-radius: 999px;
-
   font-size: 14px;
   font-weight: 700;
-
   cursor: pointer;
 }
 
 .content-admin-modal-cancel {
-  background: #ffffff;
-  color: #111111;
-
-  border: 1px solid #d8d8d3;
+  background: var(--bg-main);
+  color: var(--text-main);
+  border: 1px solid var(--border-strong);
 }
 
 .content-admin-modal-delete {
-  background: #b42318;
-  color: #ffffff;
-
-  border: 1px solid #b42318;
+  background: var(--color-danger);
+  color: var(--text-light);
+  border: 1px solid var(--color-danger);
 }
 
 .content-admin-modal-cancel:hover:not(:disabled) {
-  border-color: #111111;
+  border-color: var(--text-main);
 }
 
 .content-admin-modal-delete:hover:not(:disabled) {
-  background: #941b13;
+  background: var(--color-danger-dark);
 }
 
 .content-admin-modal-cancel:disabled,
@@ -435,10 +361,11 @@
   opacity: 0.55;
   cursor: not-allowed;
 }
+
 .contact-people-admin-section {
   margin-top: 64px;
   padding-top: 48px;
-  border-top: 1px solid #ddddda;
+  border-top: 1px solid var(--border-card-hover);
 }
 
 .contact-people-admin-heading {
@@ -463,7 +390,7 @@
   margin: 14px 0 0;
   font-size: 16px;
   line-height: 1.6;
-  color: #666666;
+  color: var(--text-secondary);
 }
 
 @media (max-width: 760px) {
@@ -476,6 +403,7 @@
     width: 100%;
   }
 }
+
 @media (max-width: 760px) {
   .content-admin-page h1 {
     font-size: 42px;

@@ -24,7 +24,7 @@
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 1.4px;
-  color: #777777;
+  color: var(--text-muted);
 }
 
 .course-admin-page h1 {
@@ -32,7 +32,7 @@
   font-size: clamp(42px, 5vw, 62px);
   line-height: 1;
   letter-spacing: -2.5px;
-  color: #111111;
+  color: var(--text-main);
 }
 
 .course-admin-page .content-admin-header > div > p:last-child {
@@ -40,7 +40,7 @@
   margin: 20px 0 0;
   font-size: 17px;
   line-height: 1.7;
-  color: #666666;
+  color: var(--text-secondary);
 }
 
 /* Knappar */
@@ -49,9 +49,9 @@
   flex-shrink: 0;
   min-height: 48px;
   padding: 0 22px;
-  background: #111111;
-  color: #ffffff;
-  border: 1px solid #111111;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  border: 1px solid var(--bg-dark);
   border-radius: 999px;
   font-size: 14px;
   font-weight: 700;
@@ -65,7 +65,7 @@
 .course-admin-page
   .content-admin-primary-button:hover:not(:disabled) {
   transform: translateY(-2px);
-  background: #292929;
+  background: var(--button-hover);
 }
 
 .course-admin-page .content-admin-primary-button:disabled {
@@ -76,9 +76,9 @@
 .course-admin-page .content-admin-secondary-button {
   min-height: 48px;
   padding: 0 22px;
-  background: #ffffff;
-  color: #111111;
-  border: 1px solid #d8d8d3;
+  background: var(--bg-main);
+  color: var(--text-main);
+  border: 1px solid var(--border-strong);
   border-radius: 999px;
   font-size: 14px;
   font-weight: 700;
@@ -89,16 +89,16 @@
 }
 
 .course-admin-page .content-admin-secondary-button:hover {
-  background: #f8f8f6;
-  border-color: #111111;
+  background: var(--bg-hover-soft);
+  border-color: var(--text-main);
 }
 
 .course-admin-page .content-admin-delete-button {
   min-height: 48px;
   padding: 0 20px;
-  background: #ffffff;
-  color: #b42318;
-  border: 1px solid #e5b8b4;
+  background: var(--bg-main);
+  color: var(--color-danger);
+  border: 1px solid var(--border-danger);
   border-radius: 999px;
   font-size: 14px;
   font-weight: 700;
@@ -109,8 +109,8 @@
 }
 
 .course-admin-page .content-admin-delete-button:hover {
-  background: #fff3f2;
-  border-color: #b42318;
+  background: var(--bg-danger);
+  border-color: var(--color-danger);
 }
 
 /* Felmeddelande */
@@ -118,12 +118,12 @@
 .course-admin-page .content-admin-error {
   margin-bottom: 28px;
   padding: 16px 18px;
-  background: #fff1f1;
-  border: 1px solid #efcccc;
+  background: var(--bg-error);
+  border: 1px solid var(--border-error);
   border-radius: 12px;
   font-size: 14px;
   font-weight: 600;
-  color: #8b1f1f;
+  color: var(--color-error);
 }
 
 /* Formulär */
@@ -131,8 +131,8 @@
 .course-admin-page .content-admin-form-section {
   margin-bottom: 60px;
   padding: 32px;
-  background: #ffffff;
-  border: 1px solid #e5e5e0;
+  background: var(--bg-main);
+  border: 1px solid var(--border-main);
   border-radius: 22px;
 }
 
@@ -149,14 +149,14 @@
   font-size: 30px;
   line-height: 1.15;
   letter-spacing: -1px;
-  color: #111111;
+  color: var(--text-main);
 }
 
 .course-admin-page .content-admin-section-header p {
   margin: 10px 0 0;
   font-size: 15px;
   line-height: 1.6;
-  color: #666666;
+  color: var(--text-secondary);
 }
 
 .course-admin-page .content-admin-form {
@@ -184,13 +184,13 @@
   display: block;
   font-size: 14px;
   font-weight: 600;
-  color: #222222;
+  color: var(--text-label);
 }
 
 .course-admin-page .content-admin-field small {
   font-size: 12px;
   line-height: 1.5;
-  color: #777777;
+  color: var(--text-muted);
 }
 
 .course-admin-page .content-admin-field input,
@@ -199,9 +199,9 @@
   width: 100%;
   box-sizing: border-box;
   padding: 14px 16px;
-  background: #f9f9f7;
-  color: #111111;
-  border: 1px solid #d8d8d3;
+  background: var(--bg-soft);
+  color: var(--text-main);
+  border: 1px solid var(--border-strong);
   border-radius: 12px;
   font: inherit;
   font-size: 15px;
@@ -226,9 +226,9 @@
 .course-admin-page .content-admin-field input:focus,
 .course-admin-page .content-admin-field textarea:focus,
 .course-admin-page .content-admin-field select:focus {
-  background: #ffffff;
-  border-color: #111111;
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+  background: var(--bg-main);
+  border-color: var(--text-main);
+  box-shadow: var(--shadow-focus);
 }
 
 /* Bild */
@@ -239,8 +239,8 @@
   height: 260px;
   overflow: hidden;
   margin-top: 6px;
-  background: #f2f2ef;
-  border: 1px solid #e5e5e0;
+  background: var(--bg-preview);
+  border: 1px solid var(--border-main);
   border-radius: 16px;
 }
 
@@ -259,8 +259,8 @@
   gap: 14px 28px;
   margin-top: 30px;
   padding: 22px 0;
-  border-top: 1px solid #ecece8;
-  border-bottom: 1px solid #ecece8;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
 }
 
 .course-admin-page .content-admin-checkboxes label {
@@ -270,7 +270,7 @@
   gap: 9px;
   font-size: 14px;
   font-weight: 600;
-  color: #222222;
+  color: var(--text-label);
   cursor: pointer;
 }
 
@@ -278,7 +278,7 @@
   width: 17px;
   height: 17px;
   margin: 0;
-  accent-color: #111111;
+  accent-color: var(--text-main);
 }
 
 /* Formulärknappar */
@@ -309,14 +309,14 @@
   grid-template-columns: 240px minmax(0, 1fr);
   padding: 0;
   overflow: hidden;
-  background: #ffffff;
-  border: 1px solid #e5e5e0;
+  background: var(--bg-main);
+  border: 1px solid var(--border-main);
   border-radius: 20px;
 }
 
 .course-admin-page .content-admin-card-image {
   min-height: 220px;
-  background: #f2f2ef;
+  background: var(--bg-preview);
 }
 
 .course-admin-page .content-admin-card-image img {
@@ -349,7 +349,7 @@
   font-weight: 700;
   letter-spacing: 1.2px;
   text-transform: uppercase;
-  color: #777777;
+  color: var(--text-muted);
 }
 
 .course-admin-page .content-admin-card h3 {
@@ -357,7 +357,7 @@
   font-size: 24px;
   line-height: 1.2;
   letter-spacing: -0.7px;
-  color: #111111;
+  color: var(--text-main);
 }
 
 .course-admin-page
@@ -368,7 +368,7 @@
   margin: 12px 0 0;
   font-size: 14px;
   line-height: 1.65;
-  color: #666666;
+  color: var(--text-secondary);
 }
 
 /* Kursinfo */
@@ -382,12 +382,12 @@
 
 .course-admin-page .content-admin-card-meta span {
   padding: 7px 10px;
-  background: #f5f5f2;
-  border: 1px solid #e5e5e0;
+  background: var(--bg-muted);
+  border: 1px solid var(--border-main);
   border-radius: 999px;
   font-size: 12px;
   font-weight: 600;
-  color: #555555;
+  color: var(--text-body);
 }
 
 /* Kortknappar */

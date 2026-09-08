@@ -1,8 +1,8 @@
 .course-section {
   width: 100%;
   padding: 96px 0 110px;
-  background: #ffffff;
-  color: #111111;
+  background: var(--bg-main);
+  color: var(--text-main);
 }
 
 .course-section-container {
@@ -27,7 +27,7 @@
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 1.7px;
-  color: #666666;
+  color: var(--text-secondary);
 }
 
 .course-section-header h2 {
@@ -36,17 +36,17 @@
   font-size: clamp(42px, 5vw, 64px);
   line-height: 1;
   letter-spacing: -2.8px;
-  color: #111111;
+  color: var(--text-main);
 }
 
 .all-courses-link {
   flex-shrink: 0;
   padding-bottom: 5px;
-  color: #111111;
+  color: var(--text-main);
   text-decoration: none;
   font-size: 15px;
   font-weight: 700;
-  border-bottom: 1px solid #111111;
+  border-bottom: 1px solid var(--text-main);
 }
 
 .all-courses-link:hover {
@@ -65,8 +65,8 @@
   min-width: 0;
   height: 100%;
   overflow: hidden;
-  background: #f5f5f2;
-  border: 1px solid #ecece8;
+  background: var(--bg-muted);
+  border: 1px solid var(--border-light);
   border-radius: 24px;
   box-sizing: border-box;
   transition:
@@ -77,15 +77,15 @@
 
 .course-card:hover {
   transform: translateY(-6px);
-  border-color: #ddddda;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+  border-color: var(--border-card-hover);
+  box-shadow: var(--shadow-course-card);
 }
 
 .course-card-image-wrapper {
   width: 100%;
   height: 220px;
   overflow: hidden;
-  background: #e8e8e5;
+  background: var(--bg-business-image);
 }
 
 .course-card-image {
@@ -116,12 +116,12 @@
   width: fit-content;
   margin-bottom: 22px;
   padding: 7px 12px;
-  background: #ffffff;
+  background: var(--bg-main);
   border-radius: 999px;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.7px;
-  color: #555555;
+  color: var(--text-body);
 }
 
 .course-card h3 {
@@ -129,14 +129,14 @@
   font-size: 30px;
   line-height: 1.1;
   letter-spacing: -1.3px;
-  color: #111111;
+  color: var(--text-main);
 }
 
 .course-card-content > p {
   margin: 18px 0 0;
   font-size: 16px;
   line-height: 1.65;
-  color: #666666;
+  color: var(--text-secondary);
 }
 
 .course-info {
@@ -148,11 +148,11 @@
 
 .course-info span {
   padding: 7px 10px;
-  background: #ebebe7;
+  background: var(--bg-course-info);
   border-radius: 8px;
   font-size: 12px;
   font-weight: 600;
-  color: #555555;
+  color: var(--text-body);
 }
 
 .course-card-link {
@@ -161,7 +161,7 @@
   width: fit-content;
   margin-top: auto;
   padding-top: 30px;
-  color: #111111;
+  color: var(--text-main);
   text-decoration: none;
   font-size: 15px;
   font-weight: 700;

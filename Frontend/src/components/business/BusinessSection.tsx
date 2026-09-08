@@ -10,9 +10,14 @@ function BusinessSection({
   index,
 }: BusinessSectionProps) {
   const isReversed = index % 2 !== 0;
+  const isMuted = index % 2 !== 0;
 
   return (
-    <section className="business-section">
+    <section
+      className={`business-section ${
+        isMuted ? "business-section-muted" : ""
+      }`}
+    >
       <div
         className={`business-page-container business-section-grid ${
           isReversed ? "business-section-reverse" : ""

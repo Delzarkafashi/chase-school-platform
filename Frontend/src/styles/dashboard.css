@@ -2,24 +2,20 @@
   min-height: 100vh;
   display: grid;
   grid-template-columns: 280px minmax(0, 1fr);
-  background: #f5f5f2;
-  color: #111111;
+  background: var(--bg-muted);
+  color: var(--text-main);
 }
 
 .dashboard-sidebar {
   position: sticky;
   top: 0;
-
   height: 100vh;
   padding: 32px 24px;
   box-sizing: border-box;
-
   display: flex;
   flex-direction: column;
-
-  background: #111111;
-  color: #ffffff;
-
+  background: var(--bg-dark);
+  color: var(--text-light);
   overflow-y: auto;
   z-index: 1001;
 }
@@ -31,10 +27,8 @@
 .dashboard-logo {
   display: inline-block;
   margin-bottom: 32px;
-
-  color: #ffffff;
+  color: var(--text-light);
   text-decoration: none;
-
   font-size: 30px;
   font-weight: 800;
   letter-spacing: -1.2px;
@@ -44,10 +38,8 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
-
   padding-bottom: 26px;
-
-  border-bottom: 1px solid #303030;
+  border-bottom: 1px solid var(--dashboard-border);
 }
 
 .dashboard-user-name {
@@ -57,75 +49,63 @@
 
 .dashboard-user-role {
   font-size: 13px;
-  color: #999999;
+  color: var(--dashboard-user-role);
 }
 
 .dashboard-nav {
   display: flex;
   flex-direction: column;
   gap: 6px;
-
   margin-top: 28px;
 }
 
 .dashboard-nav a {
   padding: 12px 14px;
-
-  color: #bdbdbd;
+  color: var(--dashboard-nav-text);
   text-decoration: none;
-
   border-radius: 10px;
-
   font-size: 14px;
   font-weight: 600;
-
   transition:
     background 0.2s ease,
     color 0.2s ease;
 }
 
 .dashboard-nav a:hover {
-  background: #1d1d1d;
-  color: #ffffff;
+  background: var(--dashboard-nav-hover);
+  color: var(--text-light);
 }
 
 .dashboard-nav a.active {
-  background: #ffffff;
-  color: #111111;
+  background: var(--bg-main);
+  color: var(--text-main);
 }
 
 .dashboard-logout {
   flex-shrink: 0;
-
   margin-top: auto;
   padding: 12px 14px;
-
   background: transparent;
-  color: #bdbdbd;
-
-  border: 1px solid #333333;
+  color: var(--dashboard-nav-text);
+  border: 1px solid var(--course-fact-border);
   border-radius: 10px;
-
   font: inherit;
   font-size: 14px;
   font-weight: 600;
-
   cursor: pointer;
-
   transition:
     background 0.2s ease,
     color 0.2s ease;
 }
 
 .dashboard-logout:hover {
-  background: #ffffff;
-  color: #111111;
+  background: var(--bg-main);
+  color: var(--text-main);
 }
 
 .dashboard-main {
   width: 100%;
   min-width: 0;
-
   padding: 64px;
   box-sizing: border-box;
 }
@@ -139,59 +119,49 @@
 .dashboard-eyebrow {
   display: inline-block;
   margin-bottom: 14px;
-
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 1.5px;
-
-  color: #777777;
+  color: var(--text-muted);
 }
 
 .dashboard-overview h1 {
   max-width: 800px;
   margin: 0;
-
   font-size: clamp(44px, 5vw, 64px);
   line-height: 1;
   letter-spacing: -2.6px;
-
   overflow-wrap: break-word;
 }
 
 .dashboard-overview > p {
   max-width: 650px;
   margin: 22px 0 0;
-
   font-size: 17px;
   line-height: 1.7;
-
-  color: #666666;
+  color: var(--text-secondary);
 }
 
 .dashboard-overview-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 22px;
-
   margin-top: 48px;
 }
 
 .dashboard-overview-card {
   min-width: 0;
   padding: 28px;
-
-  background: #ffffff;
-
-  border: 1px solid #e5e5e0;
+  background: var(--bg-main);
+  border: 1px solid var(--border-main);
   border-radius: 20px;
 }
 
 .dashboard-overview-card span {
   display: block;
   margin-bottom: 12px;
-
   font-size: 13px;
-  color: #777777;
+  color: var(--text-muted);
 }
 
 .dashboard-overview-card strong {
@@ -208,7 +178,6 @@
 .content-management h1 {
   max-width: 850px;
   margin: 0;
-
   font-size: clamp(42px, 5vw, 62px);
   line-height: 1;
   letter-spacing: -2.5px;
@@ -217,18 +186,15 @@
 .content-management > p {
   max-width: 680px;
   margin: 22px 0 0;
-
   font-size: 17px;
   line-height: 1.7;
-
-  color: #666666;
+  color: var(--text-secondary);
 }
 
 .content-management-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
-
   margin-top: 48px;
 }
 
@@ -236,15 +202,11 @@
   display: block;
   min-width: 0;
   padding: 30px;
-
-  background: #ffffff;
-
-  border: 1px solid #e5e5e0;
+  background: var(--bg-main);
+  border: 1px solid var(--border-main);
   border-radius: 20px;
-
-  color: #111111;
+  color: var(--text-main);
   text-decoration: none;
-
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
@@ -252,31 +214,27 @@
 
 .content-management-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--shadow-content-card);
 }
 
 .content-management-card > span {
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 1.2px;
-
-  color: #777777;
+  color: var(--text-muted);
 }
 
 .content-management-card h2 {
   margin: 12px 0 0;
-
   font-size: 28px;
   letter-spacing: -1px;
 }
 
 .content-management-card p {
   margin: 14px 0 0;
-
   font-size: 15px;
   line-height: 1.6;
-
-  color: #666666;
+  color: var(--text-secondary);
 }
 
 .dashboard-mobile-header {
@@ -311,27 +269,21 @@
     position: sticky;
     top: 0;
     z-index: 1100;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     width: 100%;
     height: 72px;
     padding: 0 24px;
-
-    background: #111111;
-    color: #ffffff;
-
-    border-bottom: 1px solid #2c2c2c;
-
+    background: var(--bg-dark);
+    color: var(--text-light);
+    border-bottom: 1px solid var(--dashboard-border-mobile);
     box-sizing: border-box;
   }
 
   .dashboard-mobile-logo {
-    color: #ffffff;
+    color: var(--text-light);
     text-decoration: none;
-
     font-size: 27px;
     font-weight: 800;
     letter-spacing: -1px;
@@ -342,27 +294,20 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     width: 44px;
     height: 44px;
     gap: 5px;
-
     padding: 0;
-
     background: transparent;
     border: 0;
-
     cursor: pointer;
   }
 
   .dashboard-menu-button span {
     display: block;
-
     width: 24px;
     height: 2px;
-
-    background: #ffffff;
-
+    background: var(--text-light);
     transition:
       transform 0.25s ease,
       opacity 0.25s ease;
@@ -385,24 +330,18 @@
     top: 88px;
     left: 50%;
     z-index: 1050;
-
     width: min(420px, calc(100vw - 32px));
     height: calc(100vh - 104px);
-
     padding: 28px 24px;
-
     border-radius: 0 0 18px 18px;
-
     transform: translate(-50%, -120%);
     opacity: 0;
     visibility: hidden;
-
     transition:
       transform 0.3s ease,
       opacity 0.25s ease,
       visibility 0.25s ease;
-
-    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--shadow-dashboard-menu);
   }
 
   .dashboard-sidebar.open {
@@ -419,18 +358,12 @@
     position: fixed;
     inset: 72px 0 0 0;
     z-index: 1040;
-
     display: block;
-
     width: 100%;
     height: calc(100vh - 72px);
-
     padding: 0;
-
-    background: rgba(0, 0, 0, 0.4);
-
+    background: var(--dashboard-overlay);
     border: 0;
-
     cursor: pointer;
   }
 
@@ -460,12 +393,9 @@
 
   .dashboard-sidebar {
     top: 78px;
-
     width: calc(100vw - 28px);
     height: calc(100vh - 92px);
-
     padding: 24px 20px;
-
     border-radius: 0 0 16px 16px;
   }
 
